@@ -1,0 +1,56 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.authFormWrap {
+    background-color: $primary-bg-color;
+    box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+    border-radius: 15px;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+
+    @include media(m) {
+        padding: 40px 40px 60px;
+    }
+
+    &__image {
+        @include media(m) {
+            width: 48px;
+            height: 48px;
+        }
+
+        &-block {
+            display: none;
+
+            @include media(m) {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            &::before, &::after {
+                content: "";
+                height: 1px;
+                width: 60px;
+                background-color: $border-color;
+                position: absolute;
+                top: 24px;
+            }
+
+            &::before {
+                left: 25%;
+            }
+
+            &::after {
+                right: 25%;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 40px;
+        @include Reg(24, $primary-font-color);
+    }
+}

@@ -1,0 +1,22 @@
+$defaultFontSize: 16;
+$defaultFontFamily: "Roboto", Arial, sans-serif;
+
+$red-color: #ff4a3d;
+$gray-color: #b1bad1;
+
+$primary-bg-color: #ffffff;
+$primary-font-color: #232935;
+$primary-label-color: rgba($primary-font-color, 0.5);
+$border-color: rgba($gray-color, 0.3);
+$border-error-color: rgba($red-color, 0.3);
+$primary-validate-color: rgba($red-color, 0.5);
+
+$h-Header: 72;
+
+/* SIZES */
+$w-large-desktop: 1440px;
+$w-middle-desktop: 1200px;
+$w-desktop: 992px;
+$w-tablet: 768px;
+
+$z-Modals: 5000;

@@ -1,0 +1,73 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.walletProvider {
+  &__actions {
+    border-top: 1px solid $border-color;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px -15px -20px;
+    padding-top: 25px;
+
+    @include media(m) {
+      margin: 20px -48px -20px;
+    }
+
+    &Text {
+      font-size: 14px;
+      font-weight: 400;
+      color: $gray-color;
+
+      > a {
+        margin-left: 4px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.walletCard {
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &--active {
+    cursor: default;
+  }
+
+  &__card {
+    border: 1px solid $border-color;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 11px 8px 21px;
+
+    &--active {
+      border-color: $red-color;
+    }
+
+    &Title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &Icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.sellerHeader {
+    $root: &;
+
+    &__top {
+        background: linear-gradient(262.34deg, rgba(189, 218, 56, 0.15) 0%, rgba(0, 167, 227, 0.15) 48.96%, rgba(136, 176, 166, 0.15) 100%);
+        padding: 44px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include media(m) {
+            padding: 44px 40px;
+        }
+    }
+
+    &--fixed {
+        position: fixed;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: all 0.25s ease;
+        z-index: 100;
+        right: 0;
+
+        @include media(l) {
+            //width: calc(100% - 280px);
+        }
+
+        #{$root} {
+            &__top {
+                padding: 15px 20px;
+                justify-content: flex-start;
+                background-color: $primary-bg-color;
+
+                @include media(m) {
+                    padding: 30px 42px;
+                }
+            }
+
+            &__ava {
+                width: 40px;
+                height: 40px;
+                border-width: 1px;
+                z-index: 1;
+
+                @include media(m) {
+                    margin-bottom: -80px;
+                    width: 64px;
+                    height: 64px;
+                    border-width: 2px;
+                }
+            }
+
+            &__img {
+                width: 38px;
+                height: 38px;
+
+                @include media(m) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .sellerHeader__name {
+            margin: 0 0 0 20px;
+            @include font(18);
+
+            @include media(m) {
+                margin-left: 40px;
+            }
+        }
+    }
+
+    &__name {
+        margin: 25px 0 10px;
+        @include Bold(24, $primary-font-color);
+    }
+
+    &__ava {
+        width: 140px;
+        height: 140px;
+        background-color: $primary-bg-color;
+        border-radius: 50%;
+        border: 5px solid transparent;
+    }
+
+    &__img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+    }
+
+    &--show {
+        transform: translateY(0);
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -70px;
+        padding: 0 20px;
+    }
+
+    .baseButton {
+        font-weight: 400;
+    }
+
+    &__share-icon {
+        width: 42px;
+        height: 42px;
+        background-color: $primary-bg-color;
+        border-radius: 50%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__wallet {
+        color: $primary-label-color;
+    }
+
+    &__nickname {
+        margin: 10px 0 40px;
+        color: $red-color;
+
+        @include media(m) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin: 40px 0;
+        border: 1px solid $border-color;
+        border-radius: 15px;
+        padding: 20px 0;
+
+        &-block {
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-of-type {
+                border-right: 1px solid $border-color;
+            }
+
+            @include media(m) {
+                &:not(:last-of-type) {
+                    border-right: 1px solid $border-color;
+                }
+            }
+
+            @include media(l) {
+                width: 200px;
+            }
+
+            &--clickable {
+                cursor: pointer;
+            }
+        }
+
+        &-label {
+            color: $primary-label-color;
+        }
+
+        &-value {
+            @include Bold(18, $primary-font-color);
+        }
+    }
+
+    &__description {
+        max-width: 800px;
+        margin-bottom: 60px;
+        line-height: 18px;
+        @include font(14, $primary-label-color);
+    }
+
+    &__links {
+        width: 100%;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+
+        @include media(m) {
+            justify-content: center;
+        }
+
+        &--fixed {
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(30px);
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        @include media(m) {
+            margin-right: 40px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: $red-color;
+            border-radius: 5px 5px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:hover:not(.active) {
+            text-shadow: 1px 0 0 $primary-font-color;
+        }
+    }
+}

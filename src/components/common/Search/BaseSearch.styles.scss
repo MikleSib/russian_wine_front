@@ -1,0 +1,35 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.baseSearch {
+    min-height: 42px;
+    border-radius: 8px;
+    background-color: $primary-bg-color;
+    border: 1px solid rgba(177, 186, 209, 0.3);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    min-width: 220px;
+
+    @include media(m) {
+        min-width: 300px;
+    }
+
+    &--rounded {
+        border-radius: 30px;
+    }
+
+    &__input {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        margin-left: 10px;
+        width: 100%;
+        -webkit-appearance: none;
+        @include Reg(14, $primary-font-color);
+
+        &::-webkit-input-placeholder {
+            @include Reg(14, $primary-label-color);
+        }
+    }
+}

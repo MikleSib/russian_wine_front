@@ -1,0 +1,110 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.select {
+    &__container {
+        cursor: pointer;
+        background: transparent;
+        border-radius: 30px;
+        border: 1px solid $border-color;
+        user-select: none;
+        height: 42px;
+        position: relative;
+
+        &--open {
+            .select {
+                &__arrow {
+                    transform: rotate(180deg);
+                }
+
+                &__dropdown {
+                    height: auto;
+                    transform: scaleY(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--contained {
+            background-color: $red-color !important;
+            border-color: $red-color !important;
+
+            .select {
+                &__header {
+                    color: $primary-bg-color;
+                }
+
+                &__arrow {
+                    border-top-color: $primary-bg-color;
+                }
+            }
+        }
+    }
+
+    &__header {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        @include font(16, $primary-label-color);
+    }
+
+    &__arrow {
+        margin-left: 5px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid $primary-label-color;
+        transition: transform 0.15s;
+    }
+
+    &__dropdown {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+        min-width: 200px;
+        right: 0;
+        top: 60px;
+        box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+        border-radius: 15px;
+        background-color: $primary-bg-color;
+        padding: 10px 0;
+        z-index: 99;
+        transition: transform 0.15s, opacity 0.15s;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    &__list {
+        &-check {
+            margin-right: 15px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid $gray-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                opacity: 0;
+            }
+        }
+
+        &-item {
+            list-style: none;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: rgba($gray-color, 5%);
+            }
+
+            &--active {
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.checkbox {
+    appearance: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+    border: 1px solid #ADADBD;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-color: transparent;
+        top: 30%;
+        left: 0;
+        right: 0;
+        width: 55%;
+        height: 30%;
+        margin: auto;
+        transform: rotate(-50deg);
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    &:checked {
+        background-color: $red-color;
+        border-color: $red-color;
+
+        &:after {
+            border-color: white;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        margin-left: 10px;
+        @include font(14, $primary-font-color);
+    }
+}

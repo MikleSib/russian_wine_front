@@ -1,0 +1,142 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.delivery-detail {
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include media(l) {
+      padding: 50px 0;
+    }
+  }
+  &__title {
+    justify-content: space-between;
+    align-self: flex-start;
+    margin: 0 0 40px;
+    @include font(18);
+
+    @include media(m) {
+      display: flex;
+    }
+
+    @include media(l) {
+      @include font(24);
+    }
+  }
+  &__field {
+    margin-bottom: 16px;
+
+    @include media(l) {
+      margin-bottom: 0;
+      max-width: 380px;
+
+      &.is-small {
+        max-width: 240px;
+      }
+    }
+  }
+
+  &__link {
+    color: royalblue;
+  }
+
+  &__select {
+    &-container {
+      width: 100%;
+      margin-bottom: 16px;
+
+      @include media(l) {
+        margin-bottom: 0;
+        max-width: 380px;
+      }
+    }
+  }
+
+  &__phone-code {
+    max-width: 160px;
+    margin-right: 10px;
+  }
+
+  &__row {
+    border-bottom: 1px solid $border-color;
+    padding: 20px 20px;
+
+    @include media(m) {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      font-size: 14px;
+    }
+
+    @include media(md) {
+      font-size: 16px;
+    }
+
+    &--collapse {
+      .purchase__cell {
+        &-arrow {
+          transform: rotate(180deg);
+        }
+
+        &--mobile {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+          padding-top: 20px;
+        }
+      }
+    }
+
+    &--user {
+      grid-template-columns: 1.4fr 0.5fr 0.5fr 0.65fr 0.35fr;
+    }
+  }
+
+  &__cost-info {
+    span {
+      margin-left: 4px;
+      font-weight: 500;
+    }
+  }
+
+  &__group-info {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__status {
+    margin-top: 10px;
+    font-size: 16px;
+    // font-weight: 400;
+    display: flex;
+
+    @include media(m) {
+      margin-top: 0;
+    }
+
+    span {
+      margin-left: 4px;
+      padding: 8px 25px;
+      height: 35px;
+      font-weight: 400;
+      background: #FFF4CE;
+      border-radius: 30px;
+    }
+  }
+
+  &__status-description {
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(35, 41, 53, 0.5);
+
+    @include media(m) {
+      margin-top: 0;
+    }
+  }
+
+  &__cancel-button {
+    margin-left: 10px;
+    height: 35px;
+  }
+}

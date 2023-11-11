@@ -1,0 +1,51 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.basket {
+    padding-top: 40px;
+
+    .container {
+        @media (min-width: 1200px) {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .basket_header {
+        margin-bottom: 40px;
+    }
+    
+    .basket_header_title {
+        color: #232935;
+        font-size: 24px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 14px;
+    }
+
+    .basket_header_cancel_btn {
+        margin-right: 20px;
+        display: block !important;
+    }
+
+    .basket_cards_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 20px;
+    }
+
+    .basket_empty_message {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px; 
+        font-weight: 400;
+        min-height: 20vh;
+    }
+}

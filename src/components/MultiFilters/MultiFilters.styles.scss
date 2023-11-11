@@ -1,0 +1,127 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.filters {
+    &__top-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        @include SemiBold(16, $red-color);
+
+        > span {
+            cursor: pointer;
+        }
+
+        @include media(1024px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin: 40px 0;
+        @include Bold(24, $primary-font-color);
+
+        @include media(1024px) {
+            margin: 0 0 40px 20px;
+        }
+    }
+
+    &__block {
+        border-top: 1px solid $border-color;
+        padding: 20px 0;
+
+        &:last-of-type {
+            border-bottom: 1px solid $border-color;
+        }
+
+        &-head {
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            span {
+                @include Bold(18, $primary-font-color);
+            }
+
+            svg {
+                transition: transform 0.2s ease;
+            }
+        }
+
+        &-body {
+            margin-top: 20px;
+            padding: 0 20px;
+            height: auto;
+            max-height: 120px;
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+        &-bottom {
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            @include font(14, $red-color);
+
+            &::before {
+                content: "";
+                margin: 0 14px 0 7px;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px solid $red-color;
+            }
+        }
+
+        &--hide & {
+            &-head {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &-body {
+                height: 0;
+                opacity: 0;
+                margin-top: 0;
+                visibility: hidden;
+            }
+
+            &-bottom {
+                display: none;
+            }
+        }
+
+        &--all & {
+            &-body {
+                max-height: none;
+            }
+
+            &-bottom {
+                margin-top: 20px;
+
+                &::before {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__check-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__count {
+        @include font(14, $primary-label-color);
+    }
+}

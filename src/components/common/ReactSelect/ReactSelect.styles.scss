@@ -1,0 +1,68 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.react-select {
+    width: 100%;
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__label {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        color: $primary-label-color;
+    }
+
+    &__control {
+        min-height: 42px !important;
+        border-radius: 8px !important;
+        border-color: $border-color !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    &__placeholder {
+        @include Reg(16, $primary-label-color, true);
+    }
+
+    &__single-value {
+        @include Reg(16, $primary-font-color, true);
+    }
+
+    &__option {
+        &:hover {
+            background-color: #f1f1f1 !important;
+        }
+
+        &--is-selected {
+            color: $primary-font-color !important;
+            background-color: #f1f1f1 !important;
+        }
+    }
+
+    &__menu {
+        box-shadow: 0 0 30px rgba(177, 186, 209, 0.3) !important;
+        border-radius: 8px !important;
+    }
+
+    &.is-error {
+        .react-select__control {
+            border-color: $border-error-color !important;
+        }
+    }
+
+    &--is-disabled {
+        .react-select__control {
+            background-color: transparent;
+            opacity: 0.5;
+        }
+    }
+
+    &__error {
+        min-height: 16px;
+        text-align: left;
+        margin: 10px 0 0 20px;
+        @include Reg(14, $primary-validate-color);
+    }
+}

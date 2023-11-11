@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.region-card {
+    background-color: $primary-bg-color;
+    border-radius: 15px;
+    border: 1px solid $border-color;
+    padding: 20px;
+    flex: 1 0 100%;
+    cursor: pointer;
+
+    @include media(md) {
+        max-width: 265px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @include Reg(16, $primary-font-color);
+    }
+
+    &__name {
+        font-weight: 700;
+        white-space: break-spaces;
+    }
+
+    &__value {
+        flex-shrink: 0;
+    }
+
+    &__type {
+        padding-top: 20px;
+        border-top: 1px solid $border-color;
+        @include Reg(16, $primary-label-color);
+    }
+}

@@ -1,0 +1,41 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.payment {
+    padding: 40px 0;
+    max-width: 800px;
+
+    @include media(m) {
+        padding: 60px 0;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+        @include Bold(24, $primary-font-color);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__field {
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        padding: 14px 20px;
+        outline: none;
+        flex: 0 1 65%;
+
+        @include media(m) {
+            flex-basis: 80%;
+        }
+
+        &-label {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            color: $primary-label-color;
+        }
+    }
+}

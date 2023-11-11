@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.basket_link {
+    .basket_link_count {
+        position: absolute;
+        min-width: 14px;
+        height: 14px;
+        border-radius: 30px;
+        background: #FF4A3D;
+        padding: 1px 4px;
+        color: #FFF;
+        font-size: 10px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        top: 0;
+        right: -3px;
+    }
+}

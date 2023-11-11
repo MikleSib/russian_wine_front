@@ -1,0 +1,275 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.profile {
+    &__container.container {
+        @media (min-width: 1200px) {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &__nav {
+        width: 100%;
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+
+        &--fixed {
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(30px);
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-right: 40px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: $red-color;
+            border-radius: 5px 5px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:hover:not(.active) {
+            text-shadow: 1px 0 0 $primary-font-color;
+        }
+    }
+
+    &__header {
+        $root: &;
+        padding: 65px 0 40px;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media(m) {
+            padding-bottom: 60px;
+        }
+
+        &-ava {
+            width: 140px;
+            height: 140px;
+            border: 5px solid $border-color;
+            border-radius: 50%;
+            position: relative;
+
+            &--allowedUpdate {
+                cursor: pointer;
+
+                &::before {
+                    content: "Update photo";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, .2);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.2s ease;
+                    color: $primary-bg-color;
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        &-error {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            min-height: 16px;
+            text-align: center;
+            white-space: nowrap;
+            @include Reg(14, $primary-validate-color);
+        }
+
+
+        &-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+
+        &--fixed {
+            position: fixed;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: all 0.25s ease;
+            z-index: 100;
+            left: 0;
+
+            #{$root} {
+                &-top {
+                    padding: 15px 20px;
+                    background: $primary-bg-color linear-gradient(262.34deg, rgba(189, 218, 56, 0.15) 0%, rgba(0, 167, 227, 0.15) 48.96%, rgba(136, 176, 166, 0.15) 100%);
+
+                    @include media(m) {
+                        padding: 30px 42px;
+                    }
+                }
+
+                &-ava {
+                    width: 40px;
+                    height: 40px;
+                    border-width: 1px;
+                    border-color: $primary-bg-color;
+                    z-index: 1;
+
+                    @include media(m) {
+                        margin-bottom: -80px;
+                        width: 64px;
+                        height: 64px;
+                        border-width: 2px;
+                    }
+                }
+
+                &-img {
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+
+                    @include media(m) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            .profile__name {
+                margin: 0 0 0 20px;
+                @include font(18);
+
+                @include media(m) {
+                    margin-left: 40px;
+                }
+            }
+
+            .profile__approvedKyc {
+                width: 12px;
+                height: 12px;
+                top: 5px;
+            }
+        }
+
+        &--show {
+            transform: translateY(0);
+        }
+    }
+
+    &__name {
+        margin: 25px 0 10px;
+        @include Bold(24, $primary-font-color);
+    }
+
+    &__wallet {
+        color: $primary-label-color;
+    }
+
+    &__nickname {
+        margin-top: 10px;
+        color: $red-color;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin: 40px 0;
+        border: 1px solid $border-color;
+        border-radius: 15px;
+        padding: 20px 0;
+
+        &-block {
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-of-type {
+                border-right: 1px solid $border-color;
+            }
+
+            @include media(m) {
+                &:not(:last-of-type) {
+                    border-right: 1px solid $border-color;
+                }
+            }
+
+            @include media(l) {
+                width: 200px;
+            }
+        }
+
+        &-label {
+            color: $primary-label-color;
+        }
+
+        &-value {
+            @include Bold(18, $primary-font-color);
+        }
+    }
+
+    &__description {
+        max-width: 800px;
+        line-height: 18px;
+        @include font(14, $primary-label-color);
+    }
+
+    &--follow {
+        .profile__header--fixed ~ .container {
+            margin-top: 150px;
+
+            @include media(m) {
+                margin-top: 140px;
+            }
+        }
+    }
+
+    &__approvedKyc {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-color: #27DC85;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg path {
+            fill: $primary-bg-color;
+        }
+    }
+}

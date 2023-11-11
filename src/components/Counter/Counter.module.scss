@@ -1,0 +1,34 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+
+    &Button {
+        height: 13.5px;
+        max-height: 13.5px;
+        width: 13.5px;
+        padding: 0;
+        margin: 0 15px;
+        font-size: 13.5px;
+    }
+    &Input {
+        height: 42px;
+        width: 49px;
+        border: 1px solid rgba(177, 186, 209, 0.3);
+        border-radius: 8px;
+        text-align: center;
+        outline: none;
+    }
+}
+
+.futures {
+    text-align: center;
+    margin-top: 40px;
+    @include media(m) {
+        margin-top: 0;
+    }
+}

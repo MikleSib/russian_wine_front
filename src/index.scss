@@ -1,0 +1,68 @@
+@import "styles/variables";
+@import "styles/mixins";
+@import "styles/bootstrap";
+@import "styles/swiper.min.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $defaultFontFamily;
+  background-color: $primary-bg-color;
+  @include Reg($defaultFontSize, $primary-font-color);
+
+  &.prevent-scroll {
+    position: relative;
+    overflow: hidden;
+  }
+
+  iframe:not(#about):not(#intercom-frame):not(.intercom-launcher-frame):not([name="intercom-messenger-frame"]):not([title="reCAPTCHA"]):not([sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"]):not([src="https://www.googletagmanager.com/ns.html?id=GTM-MTP6HDV"]):not([name="helpcrunch-iframe"]) {
+    z-index: 0 !important;
+    display: none;
+  }
+
+  iframe#about {
+    margin-top: 20px;
+    flex-grow: 1;
+    min-height: 90vh;
+    border: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: $primary-font-color;
+  text-decoration: none;
+  transition: all .2s;
+
+  &:hover, &:focus, &:active {
+    color: $primary-font-color;
+    text-decoration: none;
+  }
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,69 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.baseInput {
+    width: 100%;
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__label {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        color: $primary-label-color;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        box-shadow: none;
+        width: 100%;
+        outline: none;
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        background-color: #fff;
+        padding: 14px 20px;
+        font-family: $defaultFontFamily;
+        height: 42px;
+        @include Reg(16, $primary-font-color);
+
+        &:focus:not(:read-only),
+        &:active:not(:read-only) {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            @include Reg(16, $primary-label-color);
+        }
+
+        &--error {
+            border-color: $border-error-color;
+        }
+    }
+
+    &--disabled {
+        .baseInput__input {
+            cursor: no-drop;
+            opacity: 0.5;
+        }
+    }
+
+    &__icon-btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 2;
+        margin-right: 20px;
+    }
+
+    &__error {
+        min-height: 16px;
+        text-align: left;
+        margin: 10px 0 0 20px;
+        @include Reg(14, $primary-validate-color);
+    }
+}

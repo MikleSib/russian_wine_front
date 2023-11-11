@@ -1,0 +1,48 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.sellModal {
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    padding: 14px 65px 14px 20px;
+    font-family: $defaultFontFamily;
+    height: 42px;
+    @include Reg(16, $primary-font-color);
+    position: relative;
+
+    &:focus:not(:read-only),
+    &:active:not(:read-only) {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      @include Reg(16, $primary-label-color);
+    }
+  }
+
+  &__symbol {
+    // position: absolute;
+    right: 20px;
+    top: 12px;
+  }
+
+  &__error {
+    min-height: 19px;
+    margin: 4px 0;
+    align-self: flex-start;
+    @include Reg(14, $primary-validate-color);
+  }
+
+  &__info {
+    margin-top: 0;
+    @include Reg(14, $primary-font-color);
+  }
+}

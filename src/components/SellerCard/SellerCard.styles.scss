@@ -1,0 +1,57 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.seller-card {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+        width: 64px;
+        height: 64px;
+        margin-right: 20px;
+        flex-shrink: 0;
+        border-radius: 50%;
+
+        &--small {
+            width: 42px;
+            height: 42px;
+        }
+
+        &--empty {
+            border-radius: 50%;
+            border: 1px solid $border-color;
+            color: $gray-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(.seller-card--empty) {
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    &__name {
+        white-space: nowrap;
+        max-width: 160px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @include SemiBold(16, $primary-font-color);
+
+        &--hover {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__total {
+        margin-top: 10px;
+        @include font(16, $primary-label-color);
+    }
+}

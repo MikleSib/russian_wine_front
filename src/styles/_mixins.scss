@@ -1,0 +1,49 @@
+@import "variables";
+
+@mixin font($size, $color: false, $weight: false, $important: false) {
+    font-size: #{$size}px #{if($important, unquote(" !important"), "")};
+
+    @if $color != false {
+        color: $color #{if($important, unquote(" !important"), "")};
+    }
+
+    @if $weight != false {
+        font-weight: $weight #{if($important, unquote(" !important"), "")};
+    }
+}
+
+@mixin Reg($size: $defaultFontSize, $color, $important: false) {
+    @include font($size, $color, 400, $important);
+}
+
+@mixin SemiBold($size: $defaultFontSize, $color, $important: false) {
+    @include font($size, $color, 500, $important);
+}
+
+@mixin Bold($size: $defaultFontSize, $color, $important: false) {
+    @include font($size, $color, 700, $important);
+}
+
+@mixin media($point) {
+    @if $point == m {
+        @media (min-width: $w-tablet) {
+            @content;
+        }
+    } @else if $point == l {
+        @media (min-width: $w-desktop) {
+            @content;
+        }
+    } @else if $point == md {
+        @media (min-width: $w-middle-desktop) {
+            @content;
+        }
+    } @else if $point == xl {
+        @media (min-width: $w-large-desktop) {
+            @content;
+        }
+    } @else if $point {
+        @media (min-width: $point) {
+            @content;
+        }
+    }
+}

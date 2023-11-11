@@ -1,0 +1,99 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.icon {
+  width: 20px;
+  height: 20px;
+
+  @include media(m) {
+    margin-right: 5px;
+  }
+}
+
+.connectBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(177, 186, 209, 0.3);
+  color: #b1bad1;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.status {
+  &Wrap {
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    border: 1px solid rgba(177, 186, 209, 0.3);
+    margin: 0 auto 20px;
+    justify-content: center;
+    max-width: max-content;
+
+    @include media(m) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &Balance {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  &Address {
+    display: none;
+
+    @include media(m) {
+      display: block;
+      color: $primary-bg-color;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+
+  &Connect {
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    cursor: pointer;
+    background-color: #524f7a;
+    justify-content: center;
+    min-width: 28px;
+    min-height: 28px;
+  }
+
+  &Error {
+    color: $primary-bg-color;
+    display: flex;
+    align-items: center;
+    background-color: $red-color;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto 20px;
+    justify-content: center;
+    max-width: max-content;
+    min-height: 40px;
+    cursor: pointer;
+    @include media(m) {
+      min-height: auto;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &Icon {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+
+    @include media(m) {
+      margin: 0 5px 0 0;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.facebook_auth_btn {
+  margin-bottom: 40px;
+  button {
+    padding: 14px 56px;
+    height: 42px !important;
+    border-radius: 8px !important;
+    width: 100%;
+    color: #232935;
+    font-weight: 400;
+    background: #fff;
+    border: 1px solid #dadce0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: inherit;
+    font-family: "Roboto", sans-serif;
+    color: #232935 !important;
+    font-size: 16px;
+  }
+  svg {
+    height: 24px;
+    width: max-content;
+    margin-right: 8px;
+  }
+}

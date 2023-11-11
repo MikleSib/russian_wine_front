@@ -1,0 +1,27 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.notFound {
+    &__container {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    &__title {
+        margin: 0;
+        @include Bold(100, rgba($primary-font-color, 0.05));
+
+        @include media(m) {
+            @include font(128)
+        }
+    }
+
+    &__subtitle {
+        margin: 50px 0;
+        @include Bold(24, $primary-font-color);
+    }
+}

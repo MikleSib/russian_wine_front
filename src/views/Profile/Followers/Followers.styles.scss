@@ -1,0 +1,72 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.followers {
+    &__filters {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        @include media(m) {
+            padding: 20px;
+        }
+
+        .baseButton:first-of-type {
+            margin-right: 20px;
+        }
+    }
+
+    &__row {
+        padding: 20px 0;
+        border-bottom: 1px solid $border-color;
+
+        @include media(m) {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+        }
+    }
+
+    &__cell {
+        display: flex;
+        align-items: center;
+        @include font(16, $primary-label-color);
+
+        &--bold {
+            margin-left: 4px;
+            @include SemiBold(16, $primary-font-color);
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin-right: 22px;
+        }
+
+        &:not(:first-of-type) {
+            display: none;
+
+            @include media(m) {
+                display: flex;
+            }
+        }
+    }
+
+    &__name {
+        @include SemiBold(16, $primary-font-color);
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    &__nick {
+        margin-bottom: 5px;
+        @include font(16, $red-color);
+
+        @include media(m) {
+            margin-bottom: 0;
+        }
+    }
+}

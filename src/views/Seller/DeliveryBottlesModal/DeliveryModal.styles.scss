@@ -1,0 +1,164 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.delivery {
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include media(l) {
+      padding: 50px 0;
+    }
+  }
+  &__title {
+    justify-content: space-between;
+    align-self: flex-start;
+    margin: 0 0 40px;
+    @include font(18);
+
+    @include media(m) {
+      display: flex;
+    }
+
+    @include media(l) {
+      @include font(24);
+    }
+
+    &--delivery-price {
+      margin-bottom: 20px;
+    }
+  }
+  &__field {
+    margin-bottom: 16px;
+
+    @include media(l) {
+      margin-bottom: 0;
+      max-width: 380px;
+
+      &.is-small {
+        max-width: 240px;
+      }
+    }
+  }
+
+  &__plus-sign {
+    // position: relative;
+    // display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: 1px solid rgba(177, 186, 209, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__select {
+    &-container {
+      width: 100%;
+      margin-bottom: 16px;
+
+      @include media(l) {
+        margin-bottom: 0;
+        max-width: 380px;
+      }
+    }
+  }
+
+  &__phone-code {
+    max-width: 160px;
+    margin-right: 10px;
+  }
+
+  &__row {
+    padding: 20px 20px;
+
+    @include media(m) {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      font-size: 14px;
+    }
+
+    @include media(md) {
+      font-size: 16px;
+    }
+
+    &--border-bottom {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &--price-title {
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    &--info {
+      display: flex;
+      justify-content: space-between;
+      p {
+        max-width: 600px;
+        margin: 0;
+        font-size: 14px;
+        color: rgba(35, 41, 53, 0.5);
+      }
+  
+      span {
+        align-self: flex-start;
+        margin-left: 10px;
+        min-width: 80px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    &--collapse {
+      .purchase__cell {
+        &-arrow {
+          transform: rotate(180deg);
+        }
+
+        &--mobile {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+          padding-top: 20px;
+        }
+      }
+    }
+
+    &--user {
+      grid-template-columns: 1.4fr 0.5fr 0.5fr 0.65fr 0.35fr;
+    }
+  }
+
+  &__cost-info {
+    color: $red-color;
+    span {
+      margin-left: 4px;
+      font-weight: 500;
+    }
+  }
+
+  &__group-info {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__status {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include media(m) {
+      margin-top: 0;
+    }
+
+    span {
+      margin-left: 4px;
+      font-weight: 500;
+    }
+  }
+}

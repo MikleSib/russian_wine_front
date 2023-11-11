@@ -1,0 +1,390 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include media(l) {
+    flex-direction: row;
+  }
+}
+
+.header {
+  margin-bottom: 40px;
+
+  @include media(m) {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  margin: 0;
+  @include Bold(24, $primary-font-color);
+}
+
+.info {
+  @include font(18, $primary-label-color);
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    @include font(18, $primary-label-color);
+  }
+}
+.volume {
+  &::before,
+  &::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $primary-label-color;
+    display: inline-block;
+    margin: 0 4px;
+    vertical-align: middle;
+  }
+}
+
+.slider {
+  margin-bottom: 60px;
+  max-width: 320px;
+
+  &.slider--withPagination {
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  @include media(m) {
+    max-width: 420px;
+  }
+}
+
+.slide {
+  position: relative;
+  background-color: $primary-bg-color;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include media(m) {
+    max-width: 420px;
+    width: 420px;
+  }
+}
+
+.flag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 18px;
+}
+
+.image {
+  max-height: 205px;
+  margin: 30px 0;
+
+  @include media(m) {
+    height: 315px;
+    max-height: none;
+    margin: 50px 0;
+  }
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  flex: 1;
+  order: 0;
+  margin-top: 40px;
+
+  @include media(l) {
+    margin-left: 20px;
+    margin-top: 0;
+    order: 1;
+  }
+
+  @include media(md) {
+    margin-left: 40px;
+  }
+}
+
+.buttons {
+  display: flex;
+  margin-top: 40px;
+
+  @include media(m) {
+    margin-top: 0;
+  }
+
+  .baseButton {
+    width: 160px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.details {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  border: 1px solid rgba(177, 186, 209, 0.3);
+  padding: 30px 15px;
+
+  @include media(m) {
+    max-width: 420px;
+    padding: 30px 20px;
+  }
+
+  @include media(l) {
+    margin-top: 65px;
+  }
+
+  &Price,
+  &Desc {
+    border: none;
+    margin-top: 40px;
+    max-width: none;
+    padding: 0 0 20px 0;
+    border-radius: 0;
+
+    .detailsContent {
+      padding-top: 20px;
+      margin-top: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &Price {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &Title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include Bold(18, $primary-font-color);
+
+    svg {
+      transition: transform 0.2s ease;
+      transform: rotate(180deg);
+    }
+  }
+
+  &.IsHide {
+    .detailsTitle {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    .detailsContent {
+      height: 0;
+      opacity: 0;
+      padding-top: 0;
+      margin-top: 0;
+      visibility: hidden;
+    }
+  }
+
+  &Content {
+    height: auto;
+    transition: all 0.2s ease;
+    border-top: 1px solid $border-color;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+
+  &Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      flex: 1 1 45%;
+    }
+
+    span:first-of-type {
+      color: $primary-label-color;
+    }
+
+    span:last-of-type {
+      font-weight: 500;
+      text-align: right;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.separator {
+  height: 1px;
+  border: none;
+  background-color: $border-color;
+  margin: 0 0 20px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  flex-wrap: wrap;
+
+  @include media(m) {
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+  }
+
+  &Block {
+    display: flex;
+    align-items: center;
+    color: $primary-label-color;
+    flex: 1 1 50%;
+    margin-bottom: 20px;
+
+    @include media(m) {
+      margin-right: 30px;
+      margin-bottom: 0;
+      flex: unset;
+    }
+
+    svg {
+      color: $gray-color;
+      margin-right: 10px;
+    }
+  }
+
+  &IsBlack {
+    color: $primary-font-color;
+  }
+
+  &IsRed {
+    color: $red-color;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &Image {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+
+  @include media(l) {
+    padding-bottom: 20px;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+
+  @include media(m) {
+    justify-content: normal;
+    flex: unset;
+    margin-bottom: 20px;
+  }
+
+  @include media(md) {
+    margin-bottom: 0;
+  }
+
+  &IsBold {
+    @include Bold(24, $primary-font-color);
+  }
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  @include font(18, $primary-font-color);
+  margin-left: 10px;
+
+  &Wrap {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    margin-right: 5px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+
+  &Up {
+    color: #27dc85;
+
+    &::before {
+      border-bottom: 4px solid #27dc85;
+    }
+  }
+
+  &Down {
+    color: $red-color;
+
+    &::before {
+      border-top: 4px solid $red-color;
+    }
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+
+  &Button {
+    height: 13.5px;
+    max-height: 13.5px;
+    width: 13.5px;
+    padding: 0;
+    margin: 0 15px;
+    font-size: 13.5px;
+  }
+  &Input {
+    height: 42px;
+    width: 49px;
+    border: 1px solid rgba(177, 186, 209, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+  }
+}
+
+.futures {
+  text-align: center;
+  margin-top: 40px;
+  @include media(m) {
+    margin-top: 0;
+  }
+}

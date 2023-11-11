@@ -1,0 +1,56 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.shareModal {
+    display: flex;
+    flex-direction: column;
+    max-width: 780px;
+    margin: 0 auto;
+
+    @include media(l) {
+        padding: 50px 0;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+        @include font(18);
+
+        @include media(l) {
+            @include font(24);
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        @include media(m) {
+            justify-content: space-between;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__iconWrap {
+        min-width: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        margin-bottom: 20px;
+        @include Reg(16, $primary-label-color);
+    }
+
+    &__button {
+        flex-basis: 218px;
+
+        @include media(m) {
+            flex-basis: auto;
+            margin-left: 20px;
+        }
+    }
+}

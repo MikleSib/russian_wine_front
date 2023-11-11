@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.feedbackModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+    &__icon {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: rgba($gray-color, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        &--success {
+            svg path {
+                fill: #27DC85;
+            }
+        }
+
+        &--error {
+            color: $red-color;
+        }
+    }
+
+    &__text {
+        margin: 40px 0;
+        text-align: center;
+        white-space: pre;
+        @include SemiBold(20, $primary-font-color);
+
+        @include media(m) {
+            margin: 40px 0 60px;
+            @include font(24);
+        }
+    }
+}

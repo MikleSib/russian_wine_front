@@ -1,0 +1,77 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.sendTokenModal {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @include media(m) {
+    align-items: center;
+  }
+
+  @include media(l) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    align-self: flex-start;
+    margin: 0 0 40px;
+    @include font(18);
+
+    @include media(l) {
+      @include font(24);
+    }
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    padding: 14px 20px;
+    font-family: $defaultFontFamily;
+    height: 42px;
+    @include Reg(16, $primary-font-color);
+
+    &:focus:not(:read-only),
+    &:active:not(:read-only) {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      @include Reg(16, $primary-label-color);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &--error {
+      border-color: $primary-validate-color;
+    }
+  }
+
+  &__label {
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    @include font(14, $primary-label-color);
+  }
+
+  &__error {
+    min-height: 19px;
+    color: #EF2845;
+    margin: 4px 0 20px 20px;
+    align-self: flex-start;
+    @include font(12, $primary-validate-color);
+  }
+}

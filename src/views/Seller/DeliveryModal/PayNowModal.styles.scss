@@ -1,0 +1,140 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.buyNowModal {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include media(m) {
+        align-items: center;
+    }
+
+    @include media(l) {
+        padding: 50px 0;
+    }
+
+    &__title {
+        align-self: flex-start;
+        margin: 0;
+        @include font(18);
+
+        @include media(l) {
+            @include font(24);
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 40px;
+        width: 100%;
+
+        @include media(l) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: unset;
+            margin: 40px 0 60px;
+        }
+    }
+
+    &__card {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        width: 280px;
+        min-height: 196px;
+        padding: 40px 0;
+        text-align: center;
+        position: relative;
+
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+
+        @include media(l) {
+            width: 380px;
+            min-height: 328px;
+            padding: 77px 0 0;
+
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &:hover:not(.isNotApproved) {
+            cursor: pointer;
+            outline: 2px solid $border-error-color;
+            border-color: transparent;
+        }
+
+        &-icon {
+            width: 100px;
+            height: 75px;
+
+            @include media(l) {
+                width: 200px;
+                height: 150px;
+            }
+        }
+
+        &-label {
+            margin: 20px 0 0;
+            @include Bold(18, $primary-font-color);
+
+            @include media(l) {
+                margin-top: 40px;
+            }
+        }
+
+        &-kycWarning {
+            margin: 5px auto 0;
+            max-width: 185px;
+            @include Reg(14, $primary-font-color);
+
+            @include media(l) {
+                max-width: none;
+            }
+
+            .baseLink {
+                color: $red-color;
+            }
+        }
+
+        &-check {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 22px;
+            height: 22px;
+            background-color: $border-color;
+            border-radius: 50%;
+        }
+
+        &.isActive:not(.isNotApproved) {
+            outline: 2px solid $border-error-color;
+            border-color: transparent;
+
+            .buyNowModal__card-check {
+                background-color: $red-color;
+
+                svg path {
+                    fill: $primary-bg-color;
+                }
+            }
+        }
+
+        &.isNotApproved {
+            .buyNowModal__card-check {
+                background-color: transparent;
+            }
+
+            .buyNowModal__card-label {
+                @include media(l) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

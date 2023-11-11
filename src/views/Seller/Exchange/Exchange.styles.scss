@@ -1,0 +1,223 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.exchange {
+    display: flex;
+    flex-grow: 1;
+
+    &__main {
+        flex-grow: 1;
+    }
+
+    &__content {
+        padding: 40px 20px 0;
+        max-width: 1160px;
+
+        @include media(xl) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__aside {
+        position: fixed;
+        top: 72px;
+        width: 100%;
+        background-color: $primary-bg-color;
+        z-index: 99;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+
+        &--open {
+            height: calc(100vh - 72px);
+            opacity: 1;
+            visibility: visible;
+            overflow-y: auto;
+        }
+
+        @include media(m) {
+            max-width: 280px;
+            box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+        }
+
+        @include media(1150px) {
+            display: block;
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            box-shadow: none;
+            height: auto;
+            border-right: 1px solid $border-color;
+            min-width: 280px;
+            padding: 40px 20px 20px;
+        }
+    }
+
+    &__filters {
+        display: flex;
+        justify-content: space-between;
+
+        .baseButton:nth-of-type(2) {
+            margin: 0 20px;
+        }
+    }
+
+    &__rows-wrapper {
+        margin-top: 40px;
+    }
+
+    &__row {
+        border-bottom: 1px solid $border-color;
+        padding: 20px 0;
+
+        @include media(m) {
+            display: grid;
+            grid-template-columns: 1.4fr 0.5fr 0.15fr 0.35fr 0.5fr 0.5fr 0.45fr;
+            font-size: 14px;
+        }
+
+        @include media(md) {
+            font-size: 16px;
+        }
+
+        &--collapse {
+            .purchase__cell {
+                &-arrow {
+                    transform: rotate(180deg);
+                }
+
+                &--mobile {
+                    height: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        &--user {
+            grid-template-columns: 1.4fr 0.5fr 0.5fr 0.65fr 0.35fr;
+        }
+    }
+
+    &__cell {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 45px;
+            height: 64px;
+            margin-right: 30px;
+            object-fit: contain;
+        }
+
+        &--name {
+            @include media(md) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &-wrap {
+                max-width: 185px;
+
+                @include media(md) {
+                    max-width: 290px;
+                }
+            }
+        }
+
+        &--bold {
+            font-weight: 500;
+        }
+
+        &--group-exchange {
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        &--info {
+            @include Reg(16, $primary-label-color);
+
+            span:nth-child(2) {
+                &::before, &::after {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: $primary-label-color;
+                    display: inline-block;
+                    margin: 0 4px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &--minted {
+            div {
+                background-color: #FFF4CE;
+                border-radius: 5px;
+                padding: 9px 20px;
+            }
+        }
+
+        &--sell {
+            height: 32px;
+            border: 1px solid rgba(255, 74, 61, 0.3);
+
+            &:hover, &:active {
+                background-color: rgba(255, 74, 61, 0.15);
+            }
+        }
+
+        &--pay {
+            height: 32px;
+            width: 120px;
+            // border: 1px solid #FF4A3D;
+            // background-color: #FF4A3D;
+
+            // &:hover, &:active {
+            //     background-color: #ff1a0a;
+            // }
+        }
+
+        &--button {
+            height: 32px;
+        }
+
+        &--mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            @include media(m) {
+                display: none;
+            }
+
+            button {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        &-arrow {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid $primary-label-color;
+            transition: transform 0.15s;
+            margin-left: auto;
+            cursor: pointer;
+
+            @include media(m) {
+                display: none;
+            }
+        }
+    }
+}

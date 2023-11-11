@@ -1,0 +1,24 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip_crypto)">
+<path d="M99.7656 118.363C123.712 118.363 143.125 98.9504 143.125 75.0037C143.125 51.057 123.712 31.6443 99.7656 31.6443C75.8189 31.6443 56.4062 51.057 56.4062 75.0037C56.4062 98.9504 75.8189 118.363 99.7656 118.363Z" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10"/>
+<path d="M99.7656 89.7588C107.92 89.7588 114.531 83.148 114.531 74.9931C114.531 66.8383 107.92 60.2275 99.7656 60.2275C91.6108 60.2275 85 66.8383 85 74.9931C85 83.148 91.6108 89.7588 99.7656 89.7588Z" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10"/>
+<path d="M88.75 46.3972L91.3281 52.9597" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M71.6406 62.5706L78.2031 65.3831" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M71.1719 86.0083L77.7344 83.4301" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M87.3438 102.878L90.1563 96.55" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M110.777 103.578L108.199 97.0154" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M127.891 87.4102L121.328 84.5977" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M128.359 63.9746L121.797 66.5527" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M112.188 46.8625L109.375 53.425" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M144.297 150H55.7031C38.8281 150 25 136.172 25 119.297V30.7031C25 13.8281 38.8281 0 55.7031 0H144.063C161.172 0 175 13.8281 175 30.7031V119.063C175 136.172 161.172 150 144.297 150Z" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10"/>
+<path d="M44.4531 84.3786V60.4724" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10"/>
+<path d="M44.4531 35.3928C44.4531 26.7209 51.4844 19.4553 60.3906 19.4553H139.375C148.047 19.4553 155.312 26.4866 155.312 35.3928V114.377C155.312 123.049 148.281 130.315 139.375 130.315H60.1562C51.4844 130.315 44.2188 123.283 44.2188 114.377V109.455" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10"/>
+<path d="M164.688 67.967V118.358C164.688 130.311 155.078 139.92 143.125 139.92H99.7656" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M164.688 52.9653V34.9185" stroke="#232935" stroke-opacity="0.15" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip_crypto">
+<rect width="200" height="150" fill="white"/>
+</clipPath>
+</defs>
+</svg>

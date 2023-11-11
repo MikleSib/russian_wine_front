@@ -1,0 +1,87 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.userSales {
+    display: flex;
+    flex-grow: 1;
+
+    &__aside {
+        position: fixed;
+        top: 72px;
+        width: 100%;
+        background-color: $primary-bg-color;
+        z-index: 99;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+
+        &--open {
+            height: calc(100vh - 72px);
+            opacity: 1;
+            visibility: visible;
+            overflow-y: auto;
+        }
+
+        @include media(m) {
+            max-width: 280px;
+            box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+        }
+
+        @include media(1024px) {
+            display: block;
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            box-shadow: none;
+            height: auto;
+            border-right: 1px solid $border-color;
+            min-width: 280px;
+            padding: 40px 20px 20px;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        padding: 40px 20px 0;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        max-width: 1080px;
+
+        @include media(m) {
+            margin: 0 20px 40px;
+        }
+
+        @include media(xl) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        @include Bold(24, $primary-font-color);
+    }
+
+    &__top-filters {
+        display: flex;
+        align-items: center;
+
+        .baseButton:nth-of-type(2) {
+            margin: 0 20px;
+        }
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 20px;
+    }
+}

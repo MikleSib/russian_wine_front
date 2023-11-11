@@ -1,0 +1,100 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.baseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 42px;
+    @include Bold(16, $primary-bg-color);
+
+    &__content {
+        user-select: none;
+        line-height: 1;
+    }
+
+    &--black {
+        color: $primary-font-color;
+    }
+
+    &--gray {
+        color: $primary-label-color;
+    }
+
+    &--red {
+        color: $red-color;
+    }
+
+    &--large {
+        padding: 14px 56px;
+    }
+
+    &--medium {
+        padding: 14px 40px;
+    }
+
+    &--small {
+        padding: 14px 30px;
+        font-weight: 400;
+    }
+
+    &--rounded {
+        border-radius: 30px;
+    }
+
+    &--contained {
+        background-color: $red-color;
+        border: 1px solid $red-color;
+        transition: all 0.3s ease;
+
+        &:hover:not(.baseButton--disabled) {
+            background-color: darken($red-color, 10%);
+        }
+    }
+
+    &--contained-gray {
+        background-color: rgba($gray-color, 0.15);
+        border: 1px solid rgba($gray-color, 0.15);
+        transition: all 0.3s ease;
+
+        &:hover:not(.baseButton--disabled) {
+            background-color: darken(rgba($gray-color, 0.15), 10%);
+        }
+    }
+
+    &--outlined {
+        background-color: $primary-bg-color;
+        border: 1px solid $border-color;
+        transition: all 0.3s ease;
+
+        &:hover:not(.baseButton--disabled) {
+            background-color: $border-color;
+        }
+    }
+
+    &--outlined-red {
+        background-color: transparent;
+        border: 1px solid $red-color;
+        transition: all 0.3s ease;
+
+        &:hover:not(.baseButton--disabled) {
+            background-color: $red-color;
+            color: $primary-bg-color;
+        }
+    }
+
+    &--disabled {
+        opacity: .5;
+        pointer-events: none;
+        cursor: auto;
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+}

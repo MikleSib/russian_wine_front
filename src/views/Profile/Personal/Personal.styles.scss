@@ -1,0 +1,159 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.personal {
+    padding-top: 40px;
+    max-width: 800px;
+
+    @include media(m) {
+        padding-top: 60px;
+    }
+
+    &__title {
+        margin: 0 0 40px;
+        @include Bold(24, $primary-font-color);
+    }
+
+    &__field {
+        &-label {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            color: $primary-label-color;
+        }
+
+        &-area {
+            margin-bottom: 40px;
+            width: 100%;
+            resize: none;
+            border-radius: 8px;
+            border-color: $border-color;
+            padding: 14px 20px;
+            line-height: 18px;
+            font-family: $defaultFontFamily;
+            outline: none;
+            @include font(16);
+
+            @include media(m) {
+                margin-bottom: 60px;
+            }
+        }
+
+        &-checkbox {
+            margin: 20px 0;
+            font-size: 16px;
+            color: rgba(35, 41, 53, 0.5);
+        }
+    }
+
+    &__form {
+        @include media(l) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .baseInput {
+            @include media(l) {
+                max-width: 380px;
+
+                &:nth-child(odd) {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
+
+.kyc {
+    padding: 40px 0;
+    border-bottom: 1px solid $border-color;
+
+    @include media(m) {
+        padding: 60px 0;
+    }
+
+    &__container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__caption {
+        margin: 0;
+        line-height: 18px;
+        @include font(16, $primary-font-color);
+    }
+
+    &__status {
+        display: flex;
+        align-items: center;
+
+        &Wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+            padding: 20px;
+            margin-bottom: 20px;
+
+            @include media(m) {
+                margin-bottom: 0;
+                padding: 20px 40px;
+            }
+        }
+    }
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $border-color;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &--success {
+            svg {
+                width: 15px;
+
+                path {
+                    fill: #27DC85;
+                }
+            }
+        }
+
+        &--error {
+            color: $red-color;
+
+            svg {
+                width: 15px;
+            }
+        }
+    }
+
+    &__label {
+        margin-bottom: 5px;
+        line-height: 14px;
+        @include Reg(16, $primary-label-color);
+
+        &Wrap {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            line-height: 19px;
+            @include SemiBold(16, $primary-font-color);
+        }
+    }
+
+    &__iframe-wrapper {
+        iframe {
+            display: inline !important;
+            z-index: auto !important;
+        }
+    }
+}

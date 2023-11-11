@@ -1,0 +1,88 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+@keyframes mobileKeyframes {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+    //position: absolute;
+    //top: 100%;
+    //right: 0;
+    //left: 0;
+    //animation: mobileKeyframes 0.3s forwards ease-out;
+
+    &.IsBig {
+        @include media(500px) {
+            max-width: 515px;
+        }
+    }
+
+    &.IsLarge {
+        max-width: 1180px;
+
+        .modal {
+            @include media(m) {
+                padding: 30px;
+            }
+        }
+
+        .content {
+            max-height: 80vh;
+            overflow-y: auto;
+
+            @include media(m) {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.modal {
+    padding: 20px 15px 30px;
+    background-color: $primary-bg-color;
+    box-shadow: 0 0 5px rgba(177, 186, 209, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+
+    @include media(m) {
+        padding: 48px;
+    }
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    padding: 3px;
+    color: $gray-color;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: $z-Modals;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+.content {
+    position: relative;
+}
