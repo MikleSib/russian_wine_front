@@ -120,7 +120,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <Marketplace />
-              My Marketplace
+              Моя торговая площадка
             </BaseLink>
             <hr className="header__separator" />
             <BaseLink
@@ -129,7 +129,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <UserOutlined />
-              Profile
+              Профиль
             </BaseLink>
             <BaseLink
               className="header__link--user"
@@ -137,7 +137,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <Payment />
-              Payment
+              Способ оплаты
             </BaseLink>
             <BaseLink
               className="header__link--user"
@@ -145,12 +145,12 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <Favorites />
-              Favorites
+              Избранное
             </BaseLink>
             <hr className="header__separator" />
             <BaseLink className="header__link--user" path="#" nativeClick={handleClickLogout}>
               <Logout />
-              Logout
+              Выйти
             </BaseLink>
           </>
         ) : (
@@ -161,7 +161,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <UserOutlined />
-              Sign In
+              Войти
             </BaseLink>
             <BaseLink
               className="header__link--user"
@@ -169,7 +169,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <PlusCircle />
-              Registration
+              Регистрация
             </BaseLink>
             <hr className="header__separator" />
             <BaseLink
@@ -178,7 +178,7 @@ const Header: FC = observer(() => {
               nativeClick={() => handleCloseMenuByType("mobile")}
             >
               <Key />
-              Forgot password
+              Забыл пароль
             </BaseLink>
           </>
         )}
@@ -203,7 +203,7 @@ const Header: FC = observer(() => {
             path={routes.marketplace.path}
             nativeClick={handleCloseAllMenus}
           >
-            Marketplace
+            Торговая площадка
           </BaseLink>
           <BaseLink
             className="header__link"

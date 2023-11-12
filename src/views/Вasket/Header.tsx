@@ -57,7 +57,7 @@ function Header() {
 
   return (
     <div className="d-flex align-items-center justify-content-between basket_header">
-      <div className="basket_header_title">Cart</div>
+      <div className="basket_header_title">Корзина</div>
       {basket?.length > 0 && (
         <div className="d-flex aling-center">
           <BaseButton
