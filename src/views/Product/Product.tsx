@@ -41,7 +41,7 @@ function Product() {
     return <PageLoader />;
   }
 
-  const pageTitle = `Buy wine ${winePool?.wineParams?.WineName ?? ""} ${
+  const pageTitle = `Купить вино ${winePool?.wineParams?.WineName ?? ""} ${
     winePool?.wineParams?.WineProductionYear ?? ""
   } | Russan-wine - Винный рынок NFT №1`;
 

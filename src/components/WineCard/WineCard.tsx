@@ -185,7 +185,7 @@ function WineCard({
                     basket ? () => (onBuy ? onBuy(convertedPriceValue) : null) : handleClickView
                   }
                 >
-                  {basket ? "Pay" : "View"}
+                  {basket ? "Оплатить" : "View"}
                 </BaseButton>
               </div>
             ) : (
@@ -195,7 +195,7 @@ function WineCard({
                 fullWidth
                 click={basket ? () => (onBuy ? onBuy(convertedPriceValue) : null) : handleClickView}
               >
-                {basket ? "Pay" : "View"}
+                {basket ? "Оплатить" : "View"}
               </BaseButton>
             )}
           </>

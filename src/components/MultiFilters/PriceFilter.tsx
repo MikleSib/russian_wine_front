@@ -27,7 +27,7 @@ export function PriceFilter({ onChangeValue, values, onClearCallback }: PriceFil
       })}
     >
       <div className="filters__block-head" onClick={handleToggleVisible}>
-        <span>Price</span>
+        <span>Цена</span>
         <ArrowIcon />
       </div>
       <div className="filters__block-body px-0">

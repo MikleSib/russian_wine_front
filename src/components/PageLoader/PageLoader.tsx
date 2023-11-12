@@ -8,7 +8,7 @@ export default function PageLoader(): JSX.Element {
     <div className="wrapper">
       <div className="wrapper__loader">
         <img src={logoMobileSrc} alt="logo" />
-        <h5>Loading...</h5>
+        <h5>Загрузка...</h5>
       </div>
     </div>
   );

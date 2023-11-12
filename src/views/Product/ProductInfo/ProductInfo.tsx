@@ -92,12 +92,12 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
   );
 
   const DETAILS = [
-    { label: "Name", value: winePool.wineParams.WineName },
-    { label: "Region", value: winePool.wineParams.WineProductionRegion },
-    { label: "Year", value: winePool.wineParams.WineProductionYear },
-    { label: "Producer", value: winePool.wineParams.WineProducerName },
-    { label: "Country", value: winePool.wineParams.WineProductionCountry },
-    { label: "Volume", value: winePool.wineParams.WineBottleVolume },
+    { label: "Название", value: winePool.wineParams.WineName },
+    { label: "Регион", value: winePool.wineParams.WineProductionRegion },
+    { label: "Год", value: winePool.wineParams.WineProductionYear },
+    { label: "Производитель", value: winePool.wineParams.WineProducerName },
+    { label: "Страна", value: winePool.wineParams.WineProductionCountry },
+    { label: "Объем", value: winePool.wineParams.WineBottleVolume },
   ];
 
   // prettier-ignore
@@ -364,7 +364,7 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
         <div className={styles.stat}>
           <div className={styles.statBlock}>
             <EyeIcon />
-            <span>{winePool.viewersCount} views</span>
+            <span>{winePool.viewersCount} просмотров</span>
           </div>
           <div className={styles.statBlock}>
             <div

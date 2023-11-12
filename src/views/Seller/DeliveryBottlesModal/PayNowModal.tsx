@@ -121,7 +121,7 @@ function PayNowModal({
   return (
     <Modal size="large" extraClassName="mx-3" onDismiss={onDismiss}>
       <div className="buyNowModal">
-        <h4 className="buyNowModal__title">Select a Payment Method</h4>
+        <h4 className="buyNowModal__title">Выберите способ оплаты</h4>
         <div className="buyNowModal__cards">
           <div
             className={clsx(
