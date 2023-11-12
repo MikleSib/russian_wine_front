@@ -51,9 +51,9 @@ const Footer: FC = memo(() => {
         <img src={logoGraySrc} alt="winessy" />
         <div className="d-none d-md-block">
           <BaseLink className="footer__link" path={routes.marketplace.path}>
-            Marketplace
+            Торговая площадка
           </BaseLink>
-          <BaseLink
+          {/* <BaseLink
             className="footer__link"
             path="https://winessy.com/about"
             external
@@ -71,7 +71,7 @@ const Footer: FC = memo(() => {
           </BaseLink>
           <BaseLink className="footer__link" path="https://docs.winessy.com/" external>
             FAQ
-          </BaseLink>
+          </BaseLink> */}
         </div>
       </div>
       <div className="footer__contacts">
@@ -82,11 +82,11 @@ const Footer: FC = memo(() => {
             </div>
             <div className="footer__contact-text">
               <span>
-                Contact phone
+                Контактный номер
                 <br />
-                <a href="tel:+496170961709" className="footer__contact-link">
+                <a href="tel:+88005553555" className="footer__contact-link">
                   {" "}
-                  +33 7 52 06 84 09
+                  +88005553555
                 </a>
               </span>
             </div>
@@ -96,9 +96,9 @@ const Footer: FC = memo(() => {
               <Mail />
             </div>
             <div className="footer__contact-text">
-              <span>Questions and suggestions</span>
-              <BaseLink className="footer__contact-link" path="mailto:info@winessy.fr" external>
-                info@winessy.fr
+              <span>Вопросы и предложения</span>
+              <BaseLink className="footer__contact-link" path="mailto:russianwine@mail.ru" external>
+                russianwine@mail.ru
               </BaseLink>
             </div>
           </div>
@@ -107,14 +107,14 @@ const Footer: FC = memo(() => {
               <Telegram />
             </div>
             <div className="footer__contact-text">
-              <span>Telegram support</span>
+              <span>Телеграм</span>
               <BaseLink className="footer__contact-link" path="https://t.me/winessy_fr" external>
-                @winessy_fr
+                @russianwineru
               </BaseLink>
             </div>
           </div>
         </div>
-        <div className="footer__contacts-row footer__contacts-row--right">
+        {/* <div className="footer__contacts-row footer__contacts-row--right">
           <div className="footer__creditCards">
             <AmericanExpressIcon />
             <MasterCardIcon className="mx-3" />
@@ -142,7 +142,7 @@ const Footer: FC = memo(() => {
             >
               <Twitter />
             </BaseLink>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footer__bottom">
