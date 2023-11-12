@@ -16,7 +16,7 @@ function CardRegion({ productionRegion, nameValue, priceValue }: TopRegion) {
   }, [currencyStore.currency]);
 
   const handleCurrencySelect = async (price: string | number) => {
-    if (currencyStore.currency === "USD") {
+    if (currencyStore.currency === "RUB") {
       setProductPrice(price);
     } else {
       // convert price from usd to another currency
