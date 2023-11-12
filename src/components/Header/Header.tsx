@@ -346,9 +346,9 @@ const Header: FC = observer(() => {
           onChange={handleSearchChange}
         />
         <BaseLink className="header__link" path={routes.marketplace.path}>
-          Marketplace
+          Торговая площадка
         </BaseLink>
-        <BaseLink
+        {/* <BaseLink
           className="header__link"
           path="https://winessy.com/about"
           external
@@ -366,7 +366,7 @@ const Header: FC = observer(() => {
         </BaseLink>
         <BaseLink className="header__link" path="https://docs.winessy.com/" external>
           FAQ
-        </BaseLink>
+        </BaseLink> */}
       </nav>
       <div className="header__right-menu">
         {isShowFilterMobileButton && (
