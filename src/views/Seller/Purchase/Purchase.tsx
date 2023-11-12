@@ -404,7 +404,7 @@ const Purchase: FC = observer(() => {
           />
           <div className="purchase__content">
             <div className="purchase__filters">
-              <BaseSearch isRounded placeholder="Search items..." onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск товаров..." onChange={() => null} />
 
               {!isMobile && selectedBottles.length > 0 ? (
                 <BaseButton

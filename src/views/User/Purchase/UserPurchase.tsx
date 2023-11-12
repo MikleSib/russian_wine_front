@@ -104,7 +104,7 @@ function UserPurchase() {
           />
           <div className="purchase__content">
             <div className="purchase__filters">
-              <BaseSearch isRounded placeholder="Search items..." onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск товаров..." onChange={() => null} />
               <SellerTypeFilters type={typeFilter} onSetType={setTypeFilter} />
             </div>
             <div className="purchase__rows-wrapper">

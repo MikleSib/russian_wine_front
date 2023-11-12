@@ -125,7 +125,7 @@ export default function SellerHeader({
             className="sellerHeader__link"
             path={hasSubscribe ? `/user/${userInfo.nickname}/favorites` : "/seller/activity"}
           >
-            {hasSubscribe ? "Favorites" : "Activity"}
+            {hasSubscribe ? "Избранное" : "Активность"}
           </BaseLink>
           {!hasSubscribe && showExchange ? (
             <BaseLink
@@ -181,7 +181,7 @@ export const SellerFixedHeader = ({
           className="sellerHeader__link"
           path={userNickname ? `/user/${userNickname}/favorites` : "/seller/activity"}
         >
-          {userNickname ? "Favorites" : "Activity"}
+          {userNickname ? "Избранное" : "Активность"}
         </BaseLink>
         {!userNickname && showExchange ? (
           <BaseLink

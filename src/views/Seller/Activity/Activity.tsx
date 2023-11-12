@@ -165,7 +165,7 @@ function Activity() {
           />
           <div className="activity__content">
             <div className="activity__filters">
-              <BaseSearch isRounded placeholder="Search items..." onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск товаров..." onChange={() => null} />
               <SellerTypeFilters type={typeFilter} onSetType={setTypeFilter} />
             </div>
             <div className="activity__rows-wrapper">
@@ -214,24 +214,24 @@ function Activity() {
         </div>
         <div className="activity__cell--mobile">
           <div className="activity__cell activity__cell--gray">
-            From: <span>{item.addressFrom?.nickname ?? ""}</span>
+            От: <span>{item.addressFrom?.nickname ?? ""}</span>
           </div>
           <div className="activity__cell activity__cell--gray">
-            To: <span>{item.addressTo?.nickname ?? ""}</span>
+            Куда: <span>{item.addressTo?.nickname ?? ""}</span>
           </div>
         </div>
         <div className="activity__cell activity__cell--minted d-none d-md-flex">
           <div>{capitalize(item.activityType)}</div>
         </div>
         <div className="activity__cell activity__cell--bold d-none d-md-flex">
-          $ {+item.concreteBottle.price}
+          ₽ {+item.concreteBottle.price}
         </div>
         <div className="activity__cell d-none d-md-flex">x1</div>
         <div className="activity__cell activity__cell--gray d-none d-md-flex">
-          From: <span>{item.addressFrom?.nickname ?? ""}</span>
+          От: <span>{item.addressFrom?.nickname ?? ""}</span>
         </div>
         <div className="activity__cell activity__cell--gray d-none d-md-flex">
-          To: <span>{item.addressTo?.nickname ?? ""}</span>
+          Куда: <span>{item.addressTo?.nickname ?? ""}</span>
         </div>
         <div className="activity__cell activity__cell--gray d-none d-md-flex">
           {new Date(item.createdAt * 1000).toLocaleDateString()}

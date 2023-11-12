@@ -186,7 +186,7 @@ const Marketplace: FC = observer(() => {
           />
           <div className="seller-market__content">
             <div className="seller-market__filters">
-              <BaseSearch isRounded placeholder="Search items..." onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск товаров..." onChange={() => null} />
               <SellerTypeFilters type={typeFilter} onSetType={setTypeFilter} />
             </div>
             <div className="seller-market__cards-wrapper">

@@ -360,7 +360,7 @@ function DeliveryBottlesModal({
     <Modal size="large" onDismiss={onDismiss}>
       <div className="delivery__content">
         <h4 className="delivery__title">
-          Exchange
+          Отправить по почте
           {renderDeliveryStatus()}
         </h4>
         <form autoComplete="off" noValidate onSubmit={onSubmitForm}>

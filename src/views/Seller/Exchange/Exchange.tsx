@@ -362,7 +362,7 @@ const Exchange: FC = observer(() => {
           />
           <div className="exchange__content">
             <div className="exchange__filters">
-              <BaseSearch isRounded placeholder="Search items..." onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск товаров..." onChange={() => null} />
               <SellerTypeFilters type={typeFilter} onSetType={setTypeFilter} />
             </div>
             {/* TODO move table to separate file */}
