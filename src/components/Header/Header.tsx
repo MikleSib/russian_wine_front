@@ -336,7 +336,7 @@ const Header: FC = observer(() => {
       {renderMobileMenu()}
       <img
         className="cursor-pointer"
-        src={isMobile ? logoMobileSrc : logoSrc}
+        src={logoSrc}
         alt="Russian-Wine"
         onClick={() => navigate(routes.marketplace.path)}
       />
