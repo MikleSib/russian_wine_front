@@ -139,9 +139,9 @@ function PayNowModal({
             <p className="buyNowModal__card-label">Bank card</p>
             {!isKycApproved && (
               <p className="buyNowModal__card-kycWarning">
-                To use this method you need to&nbsp;
+                Чтобы использовать этот метод, вам необходимо&nbsp;
                 <BaseLink path={routes.profile.path} nativeClick={onDismiss}>
-                  pass KYC
+                  пройти KYC
                 </BaseLink>
               </p>
             )}

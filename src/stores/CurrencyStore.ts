@@ -2,7 +2,7 @@ import { observable, action, makeObservable } from "mobx";
 import api from "services/api/api";
 
 class CurrencyStore {
-  currency = (localStorage.getItem("currency") as string) ?? "RUB";
+  currency =  "RUB";
   currencyRate = Number(localStorage.getItem("currencyRate")) ?? 1;
 
   async changeCurrency(newCurrency: string) {

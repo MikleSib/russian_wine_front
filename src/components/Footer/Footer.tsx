@@ -115,11 +115,11 @@ const Footer: FC = memo(() => {
           </div>
         </div>
         <div className="footer__contacts-row footer__contacts-row--right">
-          <div className="footer__creditCards">
+          {/* <div className="footer__creditCards">
             <AmericanExpressIcon />
             <MasterCardIcon className="mx-3" />
             <VisaIcon />
-          </div>
+          </div> */}
           {/* <div className="d-flex">
             <BaseLink
               className="footer__link footer__link--social"
