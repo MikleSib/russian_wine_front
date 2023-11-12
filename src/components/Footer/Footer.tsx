@@ -147,9 +147,9 @@ const Footer: FC = memo(() => {
       </div>
       <div className="footer__bottom">
         <span className="footer__copyright">
-          Copyright &copy; 2021-{new Date().getFullYear()} Winessy. All rights reserved.
+          Авторское право &copy; 2023-{new Date().getFullYear()} Russian-Wine. Все права защищены.
         </span>
-        <div>
+        {/* <div>
           <BaseLink
             className="footer__link footer__link--external"
             path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
@@ -171,7 +171,7 @@ const Footer: FC = memo(() => {
           >
             Cookies policy
           </BaseLink>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
