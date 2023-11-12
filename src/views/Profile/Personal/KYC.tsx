@@ -40,7 +40,7 @@ function KYC({ isKysApproved, isPending, onGetKycStatusAction }: KYCProps) {
               {renderIcon()}
             </div>
             <p className="kyc__labelWrap">
-              <span className="kyc__label">Status KYC</span>
+              <span className="kyc__label">Статус KYC</span>
               <span>{renderStatus()}</span>
             </p>
           </div>

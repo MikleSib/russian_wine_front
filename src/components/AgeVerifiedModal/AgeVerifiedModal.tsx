@@ -16,16 +16,16 @@ function AgeVerifiedModal({ onDismiss }: { onDismiss?: () => void }) {
         <div className="ageVerifiedModal__icon">
           <span>18</span>+
         </div>
-        <p className="ageVerifiedModal__text">Are you over 18 years old?</p>
+        <p className="ageVerifiedModal__text">Вам больше 18 лет?</p>
         <div className="d-flex">
           <BaseButton
             theme="outlined-red"
             color="black"
-            click={() => (window.location.href = "https://winessy.com/about")}
+            //click={() => (window.location.href = "https://winessy.com/about")}
           >
-            Cancel
+            Нет
           </BaseButton>
-          <BaseButton click={handleCLickConfirm}>Confirm</BaseButton>
+          <BaseButton click={handleCLickConfirm}>Да</BaseButton>
         </div>
       </div>
     </Modal>

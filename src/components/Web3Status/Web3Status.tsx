@@ -102,7 +102,7 @@ function Web3Status({ onCloseMenu }: Web3StatusProps) {
     return (
       <div className="statusError" onClick={switchToBinanceSmartChain}>
         <Activity className={"icon"} />
-        <span>Wrong Network</span>
+        <span>Ошибка сети</span>
       </div>
     );
   } else {
@@ -113,7 +113,7 @@ function Web3Status({ onCloseMenu }: Web3StatusProps) {
           theme="rounded contained"
           click={handleClickConnectButton}
         >
-          Connect wallet
+          Подключить кошелек
         </BaseButton>
         <div className="connectBtn d-none d-md-flex">
           <Wallet onClick={handleClickConnectButton} />

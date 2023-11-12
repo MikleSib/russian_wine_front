@@ -48,12 +48,12 @@ const Footer: FC = memo(() => {
     >
       {!isAuthRoutes && <hr className="footer__separator" />}
       <div className="footer__nav">
-        <img src={logoGraySrc} alt="winessy" />
+        {/* <img src={logoGraySrc} alt="winessy" /> */}
         <div className="d-none d-md-block">
           <BaseLink className="footer__link" path={routes.marketplace.path}>
-            Marketplace
+            Торговая площадка
           </BaseLink>
-          <BaseLink
+          {/* <BaseLink
             className="footer__link"
             path="https://winessy.com/about"
             external
@@ -71,7 +71,7 @@ const Footer: FC = memo(() => {
           </BaseLink>
           <BaseLink className="footer__link" path="https://docs.winessy.com/" external>
             FAQ
-          </BaseLink>
+          </BaseLink> */}
         </div>
       </div>
       <div className="footer__contacts">
@@ -82,11 +82,11 @@ const Footer: FC = memo(() => {
             </div>
             <div className="footer__contact-text">
               <span>
-                Contact phone
+                Телефон
                 <br />
-                <a href="tel:+496170961709" className="footer__contact-link">
+                <a href="tel:+88005553555" className="footer__contact-link">
                   {" "}
-                  +33 7 52 06 84 09
+                  +88005553555
                 </a>
               </span>
             </div>
@@ -96,9 +96,9 @@ const Footer: FC = memo(() => {
               <Mail />
             </div>
             <div className="footer__contact-text">
-              <span>Questions and suggestions</span>
-              <BaseLink className="footer__contact-link" path="mailto:info@winessy.fr" external>
-                info@winessy.fr
+              <span>Вопросы и предложения</span>
+              <BaseLink className="footer__contact-link" path="mailto:russianwine@mail.ru" external>
+                russianwine@mail.ru
               </BaseLink>
             </div>
           </div>
@@ -107,9 +107,9 @@ const Footer: FC = memo(() => {
               <Telegram />
             </div>
             <div className="footer__contact-text">
-              <span>Telegram support</span>
-              <BaseLink className="footer__contact-link" path="https://t.me/winessy_fr" external>
-                @winessy_fr
+              <span>Поддержка Telegram</span>
+              <BaseLink className="footer__contact-link" path="https://t.me/russianwineru" external>
+                @Вино России
               </BaseLink>
             </div>
           </div>
@@ -120,7 +120,7 @@ const Footer: FC = memo(() => {
             <MasterCardIcon className="mx-3" />
             <VisaIcon />
           </div>
-          <div className="d-flex">
+          {/* <div className="d-flex">
             <BaseLink
               className="footer__link footer__link--social"
               path="https://www.linkedin.com/company/winessy/"
@@ -142,14 +142,14 @@ const Footer: FC = memo(() => {
             >
               <Twitter />
             </BaseLink>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footer__bottom">
         <span className="footer__copyright">
-          Copyright &copy; 2021-{new Date().getFullYear()} Winessy. All rights reserved.
+          Авторское право &copy; 2022-{new Date().getFullYear()} Вино России. Все права защищены.
         </span>
-        <div>
+        {/* <div>
           <BaseLink
             className="footer__link footer__link--external"
             path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
@@ -171,7 +171,7 @@ const Footer: FC = memo(() => {
           >
             Cookies policy
           </BaseLink>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

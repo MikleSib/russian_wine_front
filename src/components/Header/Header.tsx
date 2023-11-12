@@ -205,7 +205,7 @@ const Header: FC = observer(() => {
           >
             Торговая площадка
           </BaseLink>
-          <BaseLink
+          {/* <BaseLink
             className="header__link"
             path="https://winessy.com/about"
             nativeClick={handleCloseAllMenus}
@@ -230,7 +230,7 @@ const Header: FC = observer(() => {
             external
           >
             FAQ
-          </BaseLink>
+          </BaseLink> */}
         </nav>
         <div>
           {isMobile && <Web3Status onCloseMenu={handleCloseAllMenus} />}

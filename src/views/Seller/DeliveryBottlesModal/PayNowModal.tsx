@@ -57,15 +57,15 @@ function PayNowModal({
       if (account) {
         const isApproved = await checkApproveForDeliveryTask();
         if (isApproved) {
-          return "Pay";
+          return "Оплатить";
         } else {
           return "USDT Contract is not approved";
         }
       } else {
-        return "Connect wallet";
+        return "Подключить кошелек";
       }
     } else {
-      return "Pay";
+      return "Оплатить";
     }
   }, [payment, account]);
 
@@ -93,7 +93,7 @@ function PayNowModal({
             id: Date.now(),
             TxTime: Date.now(),
             type: "success",
-            message: "Your NFT exchange order has been successfully created",
+            message: "Ваш заказ на обмен NFT был успешно создан",
           });
         }
         // if (updatePools) {

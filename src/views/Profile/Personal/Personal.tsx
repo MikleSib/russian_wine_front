@@ -102,7 +102,7 @@ function Personal() {
             />
           </div>
           <BaseButton type="submit" size="large" className="mx-auto">
-            Save
+            Сохранить
           </BaseButton>
         </form>
       </div>

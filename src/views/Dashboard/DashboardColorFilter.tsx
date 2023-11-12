@@ -27,7 +27,7 @@ export function DashboardColorFilter({ pathname }: DashboardColorFilterProps) {
         theme="outlined rounded"
         click={() => handleClickGoTo(COLOR_OPTIONS.RED)}
       >
-        Red
+        Красное
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -36,10 +36,10 @@ export function DashboardColorFilter({ pathname }: DashboardColorFilterProps) {
         theme="outlined rounded"
         click={() => handleClickGoTo(COLOR_OPTIONS.WHITE)}
       >
-        White
+        Белое
       </BaseButton>
       <BaseButton size="small" theme="contained rounded" click={() => handleClickGoTo()}>
-        All
+        Все
       </BaseButton>
     </div>
   );

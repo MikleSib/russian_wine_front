@@ -12,14 +12,14 @@ function TopSales({ userNickname }: { userNickname: string }) {
   return (
     <>
       <div className="dashboard__sellers">
-        <h3 className="dashboard__title m-0">Top sellers</h3>
+        <h3 className="dashboard__title m-0">Топ по продажам</h3>
         <div className="d-flex align-items-center">
           <BaseSelect
             className="d-none d-md-flex"
             options={[
-              { label: "30 Days", value: TOP_SALES_PERIOD.MONTH },
-              { label: "7 Days", value: TOP_SALES_PERIOD.WEEK },
-              { label: "1 Day", value: TOP_SALES_PERIOD.DAY },
+              { label: "30 Дней", value: TOP_SALES_PERIOD.MONTH },
+              { label: "7 Дней", value: TOP_SALES_PERIOD.WEEK },
+              { label: "1 День", value: TOP_SALES_PERIOD.DAY },
             ]}
             onOptionChange={({ value }) => setPeriod(value)}
           />
