@@ -172,7 +172,7 @@ function BuyNowModal({
           >
             <div className="buyNowModal__card-check">
               {!isKycApproved && <LockIcon />}
-              {payment === PAYMENT_METHOD.BANK_CARD && isKycApproved && <CheckIcon />}
+              {payment === PAYMENT_METHOD.BANK_CARD && isKycApproved && false && <CheckIcon />}
             </div>
             <BankCreditIcon className="buyNowModal__card-icon" />
             <p className="buyNowModal__card-label">Bank card</p>
