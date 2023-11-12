@@ -3,7 +3,7 @@ import api from "services/api/api";
 
 class CurrencyStore {
   currency =  "RUB";
-  localStorage.setItem("currency", currency);
+  //localStorage.setItem("currency", currency);
   currencyRate = Number(localStorage.getItem("currencyRate")) ?? 1;
 
   async changeCurrency(newCurrency: string) {

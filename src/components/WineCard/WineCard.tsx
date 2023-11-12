@@ -61,7 +61,7 @@ function WineCard({
   const isProductPath = pathname.includes("product");
 
   const handleCurrencySelect = async (price: number | string) => {
-    if (currency === "USD") {
+    if (currency === "RUB") {
       setProductPrice(price);
     } else {
       // convert price from usd to another currency
