@@ -19,7 +19,6 @@ import { ReactComponent as Payment } from "assets/icons/credit-card.svg";
 import { ReactComponent as Favorites } from "assets/icons/heart.svg";
 import { ReactComponent as Logout } from "assets/icons/sign-out.svg";
 import { ReactComponent as Filter } from "assets/icons/filter.svg";
-import logoMobileSrc from "assets/images/logo-fruit.svg";
 import logoSrc from "assets/images/logo-black.svg";
 import noImageIconSrc from "assets/images/no-image.png";
 import { BaseLink, BaseSearch } from "components/common";
