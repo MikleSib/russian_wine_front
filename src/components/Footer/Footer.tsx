@@ -39,142 +39,142 @@ const Footer: FC = memo(() => {
     routes.verifyAccount.path,
   ].includes(pathname);
 
-  //return (
-    // <footer
-    //   className={clsx("footer container", {
-    //     "footer--shifted": isShifted,
-    //     "footer--auth": isAuthRoutes,
-    //   })}
-    // >
-    //   {!isAuthRoutes && <hr className="footer__separator" />}
-    //   <div className="footer__nav">
-    //     <img src={logoGraySrc} alt="winessy" />
-    //     <div className="d-none d-md-block">
-    //       <BaseLink className="footer__link" path={routes.marketplace.path}>
-    //         Торговая площадка
-    //       </BaseLink>
-    //       <BaseLink
-    //         className="footer__link"
-    //         path="https://winessy.com/about"
-    //         external
-    //         openNewTab={false}
-    //       >
-    //         About
-    //       </BaseLink>
-    //       <BaseLink
-    //         className="footer__link"
-    //         path="https://winessy.com/blog"
-    //         external
-    //         openNewTab={false}
-    //       >
-    //         Blog
-    //       </BaseLink>
-    //       <BaseLink className="footer__link" path="https://docs.winessy.com/" external>
-    //         FAQ
-    //       </BaseLink>
-    //     </div>
-    //   </div>
-    //   <div className="footer__contacts">
-    //     <div className="footer__contacts-row">
-    //       <div className="footer__contact">
-    //         <div className="footer__contact-icon">
-    //           <LocationPin />
-    //         </div>
-    //         <div className="footer__contact-text">
-    //           <span>
-    //             Контактный номер
-    //             <br />
-    //             <a href="tel:+88005553555" className="footer__contact-link">
-    //               {" "}
-    //               +88005553555
-    //             </a>
-    //           </span>
-    //         </div>
-    //       </div>
-    //       <div className="footer__contact">
-    //         <div className="footer__contact-icon">
-    //           <Mail />
-    //         </div>
-    //         <div className="footer__contact-text">
-    //           <span>Вопросы и предложения</span>
-    //           <BaseLink className="footer__contact-link" path="mailto:russianwine@mail.ru" external>
-    //             russianwine@mail.ru
-    //           </BaseLink>
-    //         </div>
-    //       </div>
-    //       <div className="footer__contact">
-    //         <div className="footer__contact-icon">
-    //           <Telegram />
-    //         </div>
-    //         <div className="footer__contact-text">
-    //           <span>Телеграм</span>
-    //           <BaseLink className="footer__contact-link" path="https://t.me/winessy_fr" external>
-    //             @russianwineru
-    //           </BaseLink>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     {/* <div className="footer__contacts-row footer__contacts-row--right">
-    //       <div className="footer__creditCards">
-    //         <AmericanExpressIcon />
-    //         <MasterCardIcon className="mx-3" />
-    //         <VisaIcon />
-    //       </div>
-    //       <div className="d-flex">
-    //         <BaseLink
-    //           className="footer__link footer__link--social"
-    //           path="https://www.linkedin.com/company/winessy/"
-    //           external
-    //         >
-    //           <Linkedin />
-    //         </BaseLink>
-    //         <BaseLink
-    //           className="footer__link footer__link--social"
-    //           path="https://www.facebook.com/WinessyNFT/"
-    //           external
-    //         >
-    //           <Facebook />
-    //         </BaseLink>
-    //         <BaseLink
-    //           className="footer__link footer__link--social"
-    //           path="https://twitter.com/Winessy_invest"
-    //           external
-    //         >
-    //           <Twitter />
-    //         </BaseLink>
-    //       </div> */}
-    //     </div>
-    //   </div>
-    //   <div className="footer__bottom">
-    //     <span className="footer__copyright">
-    //       Авторское право &copy; 2023-{new Date().getFullYear()} Russian-Wine. Все права защищены.
-    //     </span>
-    //     {/* <div>
-    //       <BaseLink
-    //         className="footer__link footer__link--external"
-    //         path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
-    //         external
-    //       >
-    //         Terms & conditions
-    //       </BaseLink>
-    //       <BaseLink
-    //         className="footer__link footer__link--external"
-    //         path="https://drive.google.com/file/d/1NTyvkD2dKAmzZL7MRfby5DwV6wZK4bxo/view"
-    //         external
-    //       >
-    //         Privacy policy
-    //       </BaseLink>
-    //       <BaseLink
-    //         className="footer__link footer__link--external"
-    //         path="https://drive.google.com/file/d/161ZSpwkxiTAfVs97vpUXPWQFPZsh1zVh/view"
-    //         external
-    //       >
-    //         Cookies policy
-    //       </BaseLink>
-    //     </div> */}
-    //   </div>
-    // </footer>
-  //);
+  return (
+    <footer
+      className={clsx("footer container", {
+        "footer--shifted": isShifted,
+        "footer--auth": isAuthRoutes,
+      })}
+    >
+      {!isAuthRoutes && <hr className="footer__separator" />}
+      <div className="footer__nav">
+        <img src={logoGraySrc} alt="winessy" />
+        <div className="d-none d-md-block">
+          <BaseLink className="footer__link" path={routes.marketplace.path}>
+            Marketplace
+          </BaseLink>
+          <BaseLink
+            className="footer__link"
+            path="https://winessy.com/about"
+            external
+            openNewTab={false}
+          >
+            About
+          </BaseLink>
+          <BaseLink
+            className="footer__link"
+            path="https://winessy.com/blog"
+            external
+            openNewTab={false}
+          >
+            Blog
+          </BaseLink>
+          <BaseLink className="footer__link" path="https://docs.winessy.com/" external>
+            FAQ
+          </BaseLink>
+        </div>
+      </div>
+      <div className="footer__contacts">
+        <div className="footer__contacts-row">
+          <div className="footer__contact">
+            <div className="footer__contact-icon">
+              <LocationPin />
+            </div>
+            <div className="footer__contact-text">
+              <span>
+                Contact phone
+                <br />
+                <a href="tel:+496170961709" className="footer__contact-link">
+                  {" "}
+                  +33 7 52 06 84 09
+                </a>
+              </span>
+            </div>
+          </div>
+          <div className="footer__contact">
+            <div className="footer__contact-icon">
+              <Mail />
+            </div>
+            <div className="footer__contact-text">
+              <span>Questions and suggestions</span>
+              <BaseLink className="footer__contact-link" path="mailto:info@winessy.fr" external>
+                info@winessy.fr
+              </BaseLink>
+            </div>
+          </div>
+          <div className="footer__contact">
+            <div className="footer__contact-icon">
+              <Telegram />
+            </div>
+            <div className="footer__contact-text">
+              <span>Telegram support</span>
+              <BaseLink className="footer__contact-link" path="https://t.me/winessy_fr" external>
+                @winessy_fr
+              </BaseLink>
+            </div>
+          </div>
+        </div>
+        <div className="footer__contacts-row footer__contacts-row--right">
+          <div className="footer__creditCards">
+            <AmericanExpressIcon />
+            <MasterCardIcon className="mx-3" />
+            <VisaIcon />
+          </div>
+          <div className="d-flex">
+            <BaseLink
+              className="footer__link footer__link--social"
+              path="https://www.linkedin.com/company/winessy/"
+              external
+            >
+              <Linkedin />
+            </BaseLink>
+            <BaseLink
+              className="footer__link footer__link--social"
+              path="https://www.facebook.com/WinessyNFT/"
+              external
+            >
+              <Facebook />
+            </BaseLink>
+            <BaseLink
+              className="footer__link footer__link--social"
+              path="https://twitter.com/Winessy_invest"
+              external
+            >
+              <Twitter />
+            </BaseLink>
+          </div>
+        </div>
+      </div>
+      <div className="footer__bottom">
+        <span className="footer__copyright">
+          Copyright &copy; 2021-{new Date().getFullYear()} Winessy. All rights reserved.
+        </span>
+        <div>
+          <BaseLink
+            className="footer__link footer__link--external"
+            path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
+            external
+          >
+            Terms & conditions
+          </BaseLink>
+          <BaseLink
+            className="footer__link footer__link--external"
+            path="https://drive.google.com/file/d/1NTyvkD2dKAmzZL7MRfby5DwV6wZK4bxo/view"
+            external
+          >
+            Privacy policy
+          </BaseLink>
+          <BaseLink
+            className="footer__link footer__link--external"
+            path="https://drive.google.com/file/d/161ZSpwkxiTAfVs97vpUXPWQFPZsh1zVh/view"
+            external
+          >
+            Cookies policy
+          </BaseLink>
+        </div>
+      </div>
+    </footer>
+  );
 });
 
 export default Footer;
