@@ -39,7 +39,7 @@ const Footer: FC = memo(() => {
     routes.verifyAccount.path,
   ].includes(pathname);
 
-  return (
+  //return (
     // <footer
     //   className={clsx("footer container", {
     //     "footer--shifted": isShifted,
@@ -174,7 +174,7 @@ const Footer: FC = memo(() => {
     //     </div> */}
     //   </div>
     // </footer>
-  );
+  //);
 });
 
 export default Footer;
