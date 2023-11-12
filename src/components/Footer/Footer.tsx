@@ -142,8 +142,8 @@ const Footer: FC = memo(() => {
             >
               <Twitter />
             </BaseLink>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
       </div>
       <div className="footer__bottom">
         <span className="footer__copyright">

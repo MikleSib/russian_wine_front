@@ -1,11 +1,11 @@
 import { routes } from "utils/router";
-import logoSrc from "assets/images/logo-black.svg";
+// import logoSrc from "assets/images/logo-black.svg";
 
 export const DEFAULT_META: TPageMeta = {
   title: "Вино-России - Торговая площадка",
   description:
-    "Вино-России цель - объединить поклонников вина, коллекционеров марочных вин со всего мира, предложив разумный способ инвестирования в вино. Присоединяйтесь к нам, чтобы насладиться вином.",
-  image: logoSrc,
+    "Вино-России цель - объединить поклонников вина, коллекционеров марочных вин со всего мира, предложив разумный способ инвестирования в вино. Присоединяйтесь к нам, чтобы насладиться вином."
+  //image: logoSrc,
 };
 
 export const getCustomMeta = (path: string): TPageMeta => {
