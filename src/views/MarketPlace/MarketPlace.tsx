@@ -86,11 +86,11 @@ const MarketPlace: FC = observer(() => {
   const getPageTitle = (): string => {
     switch (pathname) {
       case routes.topInvested.path:
-        return "Top Invested";
+        return "Топ инвестиций";
       case routes.newItems.path:
-        return "New Items";
+        return "Новые товары";
       default:
-        return "All wine";
+        return "Все вина";
     }
   };
 

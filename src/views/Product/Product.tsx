@@ -72,13 +72,13 @@ function Product() {
       <div className="product container">
         <ProductInfo isUserSale={!!userName} poolData={poolResult} />
         <div className="product__new">
-          <h3 className="product__title">New items</h3>
+          <h3 className="product__title">Новые товары</h3>
           <BaseButton
             size="small"
             theme="contained rounded"
             click={() => navigate(routes.newItems.path)}
           >
-            All
+            Все
           </BaseButton>
         </div>
         {isMobile ? (

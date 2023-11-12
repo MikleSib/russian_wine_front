@@ -9,8 +9,8 @@ interface FollowersTopFiltersProps {
 }
 
 const typeOptions = [
-  { value: TYPE_OPTIONS.ALL, label: "All" },
-  { value: TYPE_OPTIONS.NEW, label: "New" },
+  { value: TYPE_OPTIONS.ALL, label: "Все" },
+  { value: TYPE_OPTIONS.NEW, label: "Новые" },
 ];
 
 export function FollowersTopFilters({ onSetType, type }: FollowersTopFiltersProps) {
@@ -29,7 +29,7 @@ export function FollowersTopFilters({ onSetType, type }: FollowersTopFiltersProp
         theme={`${type === TYPE_OPTIONS.NEW ? "contained" : "outlined"} rounded`}
         click={() => onSetType(TYPE_OPTIONS.NEW)}
       >
-        New
+        Новые
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -38,7 +38,7 @@ export function FollowersTopFilters({ onSetType, type }: FollowersTopFiltersProp
         theme={`${type === TYPE_OPTIONS.ALL ? "contained" : "outlined"} rounded`}
         click={() => onSetType(TYPE_OPTIONS.ALL)}
       >
-        All
+        Все
       </BaseButton>
     </div>
   );

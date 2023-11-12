@@ -67,10 +67,10 @@ function Header() {
             theme="outlined rounded"
             click={cleanBasket}
           >
-            Cancel all
+            Отменить все
           </BaseButton>
           <BaseButton size="small" theme="contained rounded" click={showBuyNowModal}>
-            Pay all
+            Оплатить все
           </BaseButton>
         </div>
       )}

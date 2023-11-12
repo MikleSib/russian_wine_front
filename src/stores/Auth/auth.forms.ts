@@ -10,13 +10,13 @@ export function initAuthForm(storeCtx: AuthStore): Form {
       email: {
         type: String,
         validators: [
-          required("Your e-mail field can not be empty"),
+          required("Поле вашего электронного адреса не может быть пустым"),
           email(),
           when(
             () => window.location.pathname.includes(routes.register.path),
             (value) => {
               if (value.length < 6 || value.length > 150) {
-                return "Invalid email format";
+                return "Неправильный формат почты";
               }
             },
           ),
@@ -25,14 +25,14 @@ export function initAuthForm(storeCtx: AuthStore): Form {
       nickname: {
         type: String,
         validators: [
-          required("Your nickname field can not be empty"),
+          required("Поле вашего никнейма не может быть пустым"),
           when(() => window.location.pathname.includes(routes.register.path), nickname()),
         ],
       },
       password: {
         type: String,
         validators: [
-          required("Your password field can not be empty"),
+          required("Поле вашего пароля не может быть пустым"),
           when(
             () =>
               [routes.register.path, routes.resetPassword.path].includes(
@@ -45,13 +45,13 @@ export function initAuthForm(storeCtx: AuthStore): Form {
       repeatPassword: {
         type: String,
         validators: [
-          required("Your password field can not be empty"),
+          required("Поле вашего пароля не может быть пустым"),
           when(
             () =>
               [routes.register.path, routes.resetPassword.path].includes(
                 escapeBasePathFromRoute(window.location.pathname),
               ),
-            sameAs("password", "Passwords do not match, try again"),
+            sameAs("password", "Пароли не совпадают, повторите попытку"),
           ),
         ],
       },

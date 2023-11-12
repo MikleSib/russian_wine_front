@@ -13,15 +13,15 @@ interface MarketPlaceTopFiltersProps {
 }
 
 const colorOptions = [
-  { value: COLOR_OPTIONS.ALL, label: "All" },
-  { value: COLOR_OPTIONS.RED, label: "Red" },
-  { value: COLOR_OPTIONS.WHITE, label: "White" },
+  { value: COLOR_OPTIONS.ALL, label: "Все" },
+  { value: COLOR_OPTIONS.RED, label: "Красное" },
+  { value: COLOR_OPTIONS.WHITE, label: "Белое" },
 ];
 
 const typeOptions = [
-  { value: TYPE_OPTIONS.ALL, label: "All" },
-  { value: TYPE_OPTIONS.TOP, label: "Top" },
-  { value: TYPE_OPTIONS.NEW, label: "New" },
+  { value: TYPE_OPTIONS.ALL, label: "Все" },
+  { value: TYPE_OPTIONS.TOP, label: "Топ" },
+  { value: TYPE_OPTIONS.NEW, label: "Новое" },
 ];
 
 export function MarketPlaceTopFilters({

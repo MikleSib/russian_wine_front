@@ -134,7 +134,7 @@ const Register: FC = observer(() => {
                   formKey="authForm"
                   storeKey="authStore"
                 />
-                <div className="register__form-terms">
+                {/* <div className="register__form-terms">
                   Входя в систему или создавая учетную запись, вы соглашаетесь с{" "}
                   <BaseLink
                     path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
@@ -149,7 +149,7 @@ const Register: FC = observer(() => {
                   >
                     Политика конфиденциальности
                   </BaseLink>
-                </div>
+                </div> */}
                 {/* {window.CAPTCHA_ENABLED && (
                   <ReCAPTCHA
                     ref={recaptchaRef}

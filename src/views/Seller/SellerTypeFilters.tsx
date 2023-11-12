@@ -9,9 +9,9 @@ interface SellerTypeFiltersProps {
 }
 
 const typeOptions = [
-  { value: TYPE_OPTIONS.ALL, label: "All" },
-  { value: TYPE_OPTIONS.TOP, label: "Top" },
-  { value: TYPE_OPTIONS.NEW, label: "New" },
+  { value: TYPE_OPTIONS.ALL, label: "Все" },
+  { value: TYPE_OPTIONS.TOP, label: "Топ" },
+  { value: TYPE_OPTIONS.NEW, label: "Новое" },
 ];
 
 export function SellerTypeFilters({ onSetType, type }: SellerTypeFiltersProps) {

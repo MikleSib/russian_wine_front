@@ -194,7 +194,7 @@ const Header: FC = observer(() => {
       >
         <BaseSearch
           className="header__search-field"
-          placeholder="Search items..."
+          placeholder="Поиск товаров..."
           onChange={() => null}
         />
         <nav className="header__nav">
@@ -342,7 +342,7 @@ const Header: FC = observer(() => {
       <nav className="header__nav header__nav--desktop-view">
         <BaseSearch
           className="header__search-field"
-          placeholder={isTablet ? "Search items..." : "Search items, collections, and accounts ..."}
+          placeholder={isTablet ? "Поиск товаров..." : "Поиск товаров, коллекции..."}
           onChange={handleSearchChange}
         />
         <BaseLink className="header__link" path={routes.marketplace.path}>

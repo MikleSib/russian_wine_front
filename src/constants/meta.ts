@@ -2,9 +2,9 @@ import { routes } from "utils/router";
 import logoSrc from "assets/images/logo-black.svg";
 
 export const DEFAULT_META: TPageMeta = {
-  title: "Winessy - Wine NFT Marketplace",
+  title: "Вино-России - Торговая площадка",
   description:
-    "Winessy aims to unite wine admirers, vintage wine collectors from all over the world by providing a smart way of wine investing. Join us, to benefit from wine.",
+    "Вино-России цель - объединить поклонников вина, коллекционеров марочных вин со всего мира, предложив разумный способ инвестирования в вино. Присоединяйтесь к нам, чтобы насладиться вином.",
   image: logoSrc,
 };
 
@@ -29,89 +29,89 @@ export const getCustomMeta = (path: string): TPageMeta => {
     switch (basePath) {
       case routes.login.path:
         return {
-          title: "Authorization | Winessy - Wine NFT Marketplace",
+          title: "Авторизация | Вино-России - Торговая площадка",
         };
       case routes.register.path:
         return {
-          title: "Create account | Winessy - Wine NFT Marketplace",
+          title: "Создать аккаунт | Вино-России - Торговая площадка",
         };
       case routes.forgotPassword.path:
         return {
-          title: "Password recovery | Winessy - Wine NFT Marketplace",
+          title: "Восстановление пароля | Вино-России - Торговая площадка",
         };
       case routes.resetPassword.path:
         return {
-          title: "Reset password | Winessy - Wine NFT Marketplace",
+          title: "Сбросить пароль | Вино-России - Торговая площадка",
         };
       case routes.verifyAccount.path:
         return {
-          title: "Account activation | Winessy - Wine NFT Marketplace",
+          title: "Верификация аккаунта | Вино-России - Торговая площадка",
         };
       case routes.sellerMarketPlace.path:
       case "user/marketplace":
         return {
-          title: "Seller - Marketplace | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Торговая площадка | Вино-России - Торговая площадка",
         };
       case routes.sellerPurchased.path:
       case "user/purchased":
         return {
-          title: "Seller - Purchased | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Ваши товары | Вино-России - Торговая площадка",
         };
       case routes.sellerActivity.path:
         return {
-          title: "Seller - Activity | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Ваши действия | Вино-России - Торговая площадка",
         };
       case "user/favorites":
         return {
-          title: "Seller - Favorites | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Подписки | Вино-России - Торговая площадка",
         };
       case "user/followers":
         return {
-          title: "Seller - Followers | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Подписчики | Вино-России - Торговая площадка",
         };
       case "user/following":
         return {
-          title: "Seller - Following | Winessy - Wine NFT Marketplace",
+          title: "Продажи - Подписчики | Вино-России - Торговая площадка",
         };
       case routes.profile.path:
         return {
-          title: "Profile | Winessy - Wine NFT Marketplace",
+          title: "Профиль | Вино-России - Торговая площадка",
         };
       case `${routes.profile.path}/payment`:
         return {
-          title: "Profile - Payment | Winessy - Wine NFT Marketplace",
+          title: "Профиль - Способ оплаты | Вино-России - Торговая площадка",
         };
       case `${routes.profile.path}/favorites`:
         return {
-          title: "Profile - Favorites | Winessy - Wine NFT Marketplace",
+          title: "Профиль - Подписки | Вино-России - Торговая площадка",
         };
       case `${routes.profile.path}/followers`:
         return {
-          title: "Profile - Followers | Winessy - Wine NFT Marketplace",
+          title: "Профиль - Подписчики | Вино-России - Торговая площадка",
         };
       case `${routes.profile.path}/following`:
         return {
-          title: "Profile - Following | Winessy - Wine NFT Marketplace",
+          title: "Профиль - Подписки | Вино-России - Торговая площадка",
         };
       case routes.marketplace.path:
         return {
-          title: "Dashboard | Winessy - Wine NFT Marketplace",
+          title: "Главная страница | Вино-России - Торговая площадка",
         };
       case routes.topInvested.path:
         return {
-          title: "Top Invested | Winessy - Wine NFT Marketplace",
+          title: "Топ инвестиций | Вино-России - Торговая площадка",
         };
       case routes.newItems.path:
         return {
-          title: "New Items | Winessy - Wine NFT Marketplace",
+          title: "Новые товары | Вино-России - Торговая площадка",
         };
       case routes.allWin.path:
         return {
-          title: "All Wine | Winessy - Wine NFT Marketplace",
+          title: "Все Вина | Вино-России - Торговая площадка",
         };
       case routes.userSales.path:
         return {
-          title: "User Sales | Winessy - Wine NFT Marketplace",
+          title: "Продажи пользоватей | Вино-России - Винный рынок NFT",
         };
       default:
         return DEFAULT_META;

@@ -105,7 +105,7 @@ const Login: FC = observer(() => {
     <>
       <PageMeta />
       <div className="login">
-        <AuthFormWrapper title="Authorization">
+        <AuthFormWrapper title="Авторизация">
           <GoogleAuth />
           <FacebookAuth />
           <form className="login__form" noValidate onSubmit={handleClickSubmitButton}>

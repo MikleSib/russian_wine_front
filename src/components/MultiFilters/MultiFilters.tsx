@@ -178,10 +178,10 @@ const MultiFilters: FC<MultiFiltersProps> = memo(
     return (
       <div className="filters">
         <div className="filters__top-actions">
-          <span onClick={handleClearAll}>Clear All</span>
-          <span onClick={onClose}>Done</span>
+          <span onClick={handleClearAll}>Очистить</span>
+          <span onClick={onClose}>Готово</span>
         </div>
-        <h3 className="filters__title">Filters</h3>
+        <h3 className="filters__title">Фильтры</h3>
         <PriceFilter
           values={defaultPriceValues}
           onChangeValue={setPrice}

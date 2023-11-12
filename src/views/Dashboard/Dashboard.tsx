@@ -193,7 +193,7 @@ function Dashboard() {
               theme="contained rounded"
               click={() => navigate(routes.newItems.path)}
             >
-              All
+              Все
             </BaseButton>
           </div>
           {isMobile ? (
