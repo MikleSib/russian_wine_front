@@ -113,13 +113,13 @@ export default function SellerHeader({
             className="sellerHeader__link"
             path={hasSubscribe ? `/user/${userInfo.nickname}/marketplace` : "/seller/marketplace"}
           >
-            Marketplace
+            Торговая площадка
           </BaseLink>
           <BaseLink
             className="sellerHeader__link"
             path={hasSubscribe ? `/user/${userInfo.nickname}/purchased` : "/seller/purchased"}
           >
-            Purchased
+            Ваши товары
           </BaseLink>
           <BaseLink
             className="sellerHeader__link"
@@ -132,7 +132,7 @@ export default function SellerHeader({
               className="sellerHeader__link"
               path={hasSubscribe ? `/user/${userInfo.nickname}/exchange` : "/seller/exchange"}
             >
-              Exchange
+              Получить по почте
             </BaseLink>
           ) : null}
         </div>
@@ -169,13 +169,13 @@ export const SellerFixedHeader = ({
           className="sellerHeader__link"
           path={userNickname ? `/user/${userNickname}/marketplace` : "/seller/marketplace"}
         >
-          Marketplace
+          Торговая площадка
         </BaseLink>
         <BaseLink
           className="sellerHeader__link"
           path={userNickname ? `/user/${userNickname}/purchased` : "/seller/purchased"}
         >
-          Purchased
+          Ваши товары
         </BaseLink>
         <BaseLink
           className="sellerHeader__link"
@@ -188,7 +188,7 @@ export const SellerFixedHeader = ({
             className="sellerHeader__link"
             path={userNickname ? `/user/${userNickname}/exchange` : "/seller/exchange"}
           >
-            Exchange
+            Отправить по почте
           </BaseLink>
         ) : null}
       </div>

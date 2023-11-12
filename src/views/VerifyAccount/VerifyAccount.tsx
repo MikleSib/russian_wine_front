@@ -32,7 +32,7 @@ const VerifyAccount: FC = observer(() => {
       <div className="verify">
         <AuthFormWrapper title="Registration successful">
           <p className="verify__text">
-            Registration is successful. You can log in to your account.
+            Регистрация прошла успешно. Вы можете войти в свою учетную запись.
           </p>
           <BaseButton
             className="verify__button"
@@ -40,7 +40,7 @@ const VerifyAccount: FC = observer(() => {
             click={handleClickButton}
             loading={authStore.authForm.loading}
           >
-            Log in
+            Авторизоваться
           </BaseButton>
         </AuthFormWrapper>
       </div>

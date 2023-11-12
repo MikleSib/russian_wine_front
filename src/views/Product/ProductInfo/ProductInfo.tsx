@@ -218,15 +218,15 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       // element: "",
       intro: (
         <>
-          <h4>More than Marketplace</h4>
+          <h4>Больше, чем рынок</h4>
           <ul>
             <li>
-              Winessy is the platform where you can invest in fine wine, resell your wine to another
-              person all over the world
+              Русское вино - это платформа, на которой вы можете инвестировать в изысканное вино, перепродавать свое вино другому
+              человеку по всему миру
             </li>
             <li>
-              It also has its new elements that might help you with this - analytics, investment
-              portfolio and interactions with other users
+              В нем также есть свои новые элементы, которые могут помочь вам в этом - аналитика, инвестиции
+              портфолио и взаимодействие с другими пользователями
             </li>
           </ul>
         </>
@@ -237,12 +237,12 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       element: `.${styles.detailsPrice}`,
       intro: (
         <>
-          <h4>Price history</h4>
+          <h4>История цен</h4>
           <ul>
-            <li>You can find the most important information within the product card</li>
+            <li>Наиболее важную информацию вы можете найти в карточке товара</li>
             <li>
-              We also gather the price statistics according to the inner website statistics of each
-              item, so that you can check the tendency at the same website
+              Мы также собираем статистику цен в соответствии со статистикой внутреннего веб-сайта по каждому товару,
+              чтобы вы могли проверить тенденцию на том же веб-сайте
             </li>
           </ul>
         </>
@@ -254,11 +254,11 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       element: `.${styles.details}`,
       intro: (
         <>
-          <h4>Convenient product features</h4>
+          <h4>Удобные характеристики продукта</h4>
           <ul>
             <li>
-              This section contains all the basic information, including the number of bottles
-              released within the blockchain and the quantity that has been already sold
+              Этот раздел содержит всю основную информацию, включая количество бутылок,
+              выпущенных в рамках блокчейна, и количество, которое уже было продано
             </li>
           </ul>
         </>
@@ -270,10 +270,10 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       element: "#for-user-login-hint",
       intro: (
         <>
-          <h4>Get it started</h4>
+          <h4>Начинай</h4>
           <ul>
             <li>
-              To start using Winessy - you just need to register and undergo the simple verification
+             Чтобы начать пользоваться сайтом - вам просто нужно зарегистрироваться и пройти простую верификацию
             </li>
           </ul>
         </>
@@ -285,11 +285,11 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       element: "#for-e-wallet-hint",
       intro: (
         <>
-          <h4>Final step</h4>
+          <h4>Заключительный шаг</h4>
           <ul>
             <li>
-              Connect your E-wallet to your account, if you would like to use paying with
-              cryptocurrency
+              Подключиться вашего электронного кошелька на ваш счет, если вы хотите использовать оплате
+              криптовалюта
             </li>
           </ul>
         </>
@@ -320,18 +320,18 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
         </div>
         <div className={clsx(styles.details, { [styles.IsHide]: !detailsFull })}>
           <h2 className={styles.detailsTitle} onClick={() => toggleDetails(!detailsFull)}>
-            Details
+            Детали
             <ArrowIcon />
           </h2>
           <div className={styles.detailsContent}>
             {renderDetailsRows()}
             <hr className={styles.separator} />
             <div className={styles.detailsRow}>
-              <span>NFT quantity</span>
+              <span>Количество NFT</span>
               <span>{winePool.maxTotalSupply}</span>
             </div>
             <div className={styles.detailsRow}>
-              <span>Sold</span>
+              <span>Продано</span>
               <span>{winePool.tokensCount}</span>
             </div>
             {winePool.possibleDeliveryDate &&
@@ -340,11 +340,11 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
                 <>
                   <hr className={styles.separator} />
                   <div className={styles.detailsRow}>
-                    <span>Wine category</span>
-                    <span>en-primeur wine</span>
+                    <span>Категория Вин</span>
+                    <span>вино en-primeur</span>
                   </div>
                   <div className={styles.detailsRow}>
-                    <span>Possible delivery date</span>
+                    <span>Возможная дата поставки</span>
                     <span>{moment(winePool.possibleDeliveryDate).format("MMMM YYYY")}</span>
                   </div>
                 </>
@@ -373,7 +373,7 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
             >
               {winePool.isFavorite ? <HeartFilled /> : <Heart />}
             </div>
-            <span>{winePool.favoritesCount} favorites</span>
+            <span>{winePool.favoritesCount} избранное</span>
           </div>
           <div className={styles.statBlock}>
             <TokenIcon />
@@ -433,7 +433,7 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
           })}
         >
           <h2 className={styles.detailsTitle} onClick={() => togglePriceHistory(!priceHistory)}>
-            Price History
+            История цен
             <ArrowIcon />
           </h2>
           <div className={styles.detailsContent}>
@@ -562,8 +562,8 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
       >
         {
         isUserSale
-          ? ((poolData.pool as MarketWineRaw).isMine ? "Cancel Order" : "Buy Now")
-          : "Add to Cart"
+          ? ((poolData.pool as MarketWineRaw).isMine ? "Отменить заказ" : "Купить")
+          : "Добавить в корзину"
         }   
       </BaseButton>
     );
@@ -582,7 +582,7 @@ function ProductInfo({ isUserSale, poolData, onDismissModal }: ProductInfoProps)
     return (
       <>
         <h2 className={styles.detailsTitle} onClick={() => toggleDescription(!description)}>
-          Description
+          Описание
           <ArrowIcon />
         </h2>
         <div

@@ -21,8 +21,8 @@ function Payment() {
 
   return (
     <div className="payment mx-auto">
-      <h3 className="payment__title">Payment</h3>
-      <div className="payment__field-label">Crypto wallet</div>
+      <h3 className="payment__title">Оплата</h3>
+      <div className="payment__field-label">Крипто кошелек</div>
       <div>{renderWallets()}</div>
     </div>
   );

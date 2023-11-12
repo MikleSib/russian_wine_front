@@ -22,13 +22,13 @@ function UserFollowsHeader({ imageSrc, name, nickname }: UserFollowsProps) {
       </div>
       <div className="userFollows__nav">
         <BaseLink className="userFollows__link" path={`/user/${nickname}/marketplace`}>
-          Marketplace
+          Торговая площадка
         </BaseLink>
         <BaseLink className="userFollows__link" path={`/user/${nickname}/followers`}>
-          Followers
+          Поклонники
         </BaseLink>
         <BaseLink className="userFollows__link" path={`/user/${nickname}/following`}>
-          Following
+          Подписки
         </BaseLink>
       </div>
     </div>

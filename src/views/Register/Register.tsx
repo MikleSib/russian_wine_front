@@ -100,10 +100,10 @@ const Register: FC = observer(() => {
     <>
       <PageMeta />
       <div className={clsx("register", { register__success: authStore.successScreen })}>
-        <AuthFormWrapper title={authStore.successScreen ? "Email sent" : "Create account"}>
+        <AuthFormWrapper title={authStore.successScreen ? "Письмо отправлено" : "Создать аккаунт"}>
           {authStore.successScreen ? (
             <p className="register__success-text">
-              A link was sent to your e-mail to complete your registration
+              На ваш электронный адрес была отправлена ссылка для завершения регистрации
             </p>
           ) : (
             <>
@@ -135,19 +135,19 @@ const Register: FC = observer(() => {
                   storeKey="authStore"
                 />
                 <div className="register__form-terms">
-                  By logging in or creating an account, you agree to the{" "}
+                  Входя в систему или создавая учетную запись, вы соглашаетесь с{" "}
                   <BaseLink
                     path="https://drive.google.com/file/d/1InmB8nEUj515TYqNiqRmDZGTCCByrfy-/view"
                     external
                   >
-                    Terms of Service
+                    Условия обслуживания
                   </BaseLink>{" "}
-                  and{" "}
+                  И{" "}
                   <BaseLink
                     path="https://drive.google.com/file/d/1NTyvkD2dKAmzZL7MRfby5DwV6wZK4bxo/view"
                     external
                   >
-                    Privacy Policy
+                    Политика конфиденциальности
                   </BaseLink>
                 </div>
                 {/* {window.CAPTCHA_ENABLED && (
@@ -165,11 +165,11 @@ const Register: FC = observer(() => {
                   type="submit"
                   loading={authStore.authForm.loading}
                 >
-                  Create
+                  Создать
                 </BaseButton>
               </form>
               <BaseLink className="register__login-link" path={routes.login.path}>
-                I have an account
+                У меня есть аккаунт
               </BaseLink>
             </>
           )}

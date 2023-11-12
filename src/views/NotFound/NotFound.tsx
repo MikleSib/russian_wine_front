@@ -14,8 +14,8 @@ function NotFound() {
       <PageMeta />
       <div className="notFound__container">
         <h1 className="notFound__title">{"//"} 404</h1>
-        <p className="notFound__subtitle">Page Not Found</p>
-        <BaseButton click={() => navigate(routes.marketplace.path)}>Marketplace</BaseButton>
+        <p className="notFound__subtitle">Страница не найден</p>
+        <BaseButton click={() => navigate(routes.marketplace.path)}>На главную страницу</BaseButton>
       </div>
     </>
   );

@@ -50,9 +50,9 @@ const options = {
 // }
 
 enum Period {
-  ALLTIME = "All time",
-  YEAR = "For year",
-  MONTH = "For month",
+  ALLTIME = "За все время",
+  YEAR = "За год",
+  MONTH = "За месяц",
 }
 
 // const source = CancelToken.source();
@@ -222,9 +222,9 @@ export function PriceChart({ poolId }: PriceChartProps) {
       </div>
 
       {loading ? (
-        "Loading chart..."
+        "Загрузка чартов..."
       ) : error ? (
-        "Error to load chart"
+        "Ошибка загрузки."
       ) : data ? (
         <Line options={options} data={data} />
       ) : (
@@ -270,7 +270,7 @@ export function PriceChart({ poolId }: PriceChartProps) {
                 zIndex: 10,
               }}
             >
-              <h2>no sales data yet</h2>
+              <h2>Нет продаж на данный момент</h2>
             </div>
           </div>
         </>

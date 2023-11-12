@@ -88,7 +88,7 @@ function Personal() {
             />
           </div>
           <div className="flex-fill">
-            <div className="personal__field-label">Description</div>
+            <div className="personal__field-label">Описание</div>
             <textarea
               className="personal__field-area"
               rows={8}

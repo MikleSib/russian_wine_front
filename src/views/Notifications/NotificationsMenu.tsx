@@ -60,7 +60,7 @@ const NotificationsMenu: FC = () => {
   return (
     <>
       {notificationsStore.notifications.length === 0 ? (
-        <p className="text-center">notification list is empty</p>
+        <p className="text-center">Уведомлений нет</p>
       ) : (
         notificationsStore.notifications &&
         notificationsStore.notifications.map((notification, index) => (

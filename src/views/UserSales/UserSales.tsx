@@ -100,7 +100,7 @@ const UserSales: FC = observer(() => {
         </aside>
         <div className="userSales__content">
           <div className="userSales__header">
-            <h1 className="userSales__title">User Sales</h1>
+            <h1 className="userSales__title">Вторичный рынок</h1>
             {!!((filters.WineColor?.values as FilterSelectValueType[]) ?? []).length && (
               <UserSalesTopFilters color={colorFilter} onSetColor={setColorFilter} />
             )}

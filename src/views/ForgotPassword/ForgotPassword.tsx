@@ -100,8 +100,8 @@ const ForgotPassword: FC = observer(() => {
         <AuthFormWrapper
           title={
             authStore.successScreen && !authStore.authForm.hasError
-              ? "Letter sent"
-              : "Password recovery"
+              ? "Отправленное письмо"
+              : "Восстановление пароля"
           }
         >
           <p
@@ -111,9 +111,9 @@ const ForgotPassword: FC = observer(() => {
           >
             {authStore.successScreen
               ? authStore.authForm.hasError
-                ? "User with this email is not registered"
-                : "Password recovery instruction was sent to your e-mail"
-              : "Enter your e-mail to receive password recovery instruction"}
+                ? "Пользователь с этим адресом электронной почты не зарегистрирован"
+                : "Инструкция по восстановлению пароля была отправлена на ваш e-mail"
+              : "Введите свой адрес электронной почты, чтобы получить инструкцию по восстановлению пароля"}
           </p>
           {authStore.authForm.hasError && (
             <BaseButton
@@ -121,7 +121,7 @@ const ForgotPassword: FC = observer(() => {
               size="large"
               click={() => navigate(routes.register.path)}
             >
-              Registration
+              Регистрация
             </BaseButton>
           )}
           {!authStore.successScreen && (
@@ -148,11 +148,11 @@ const ForgotPassword: FC = observer(() => {
                   type="submit"
                   loading={authStore.authForm.loading}
                 >
-                  Sent
+                  Отправить
                 </BaseButton>
               </form>
               <BaseLink className="forgot-password__forgot-link" path={routes.login.path}>
-                Back to login
+                Вернуться обратно
               </BaseLink>
             </>
           )}

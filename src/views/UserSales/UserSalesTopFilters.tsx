@@ -30,7 +30,7 @@ export function UserSalesTopFilters({ onSetColor, color }: UserSalesTopFiltersPr
         theme={`${color === COLOR_OPTIONS.RED ? "contained" : "outlined"} rounded`}
         click={() => onSetColor(COLOR_OPTIONS.RED)}
       >
-        Red
+        Красное
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -39,7 +39,7 @@ export function UserSalesTopFilters({ onSetColor, color }: UserSalesTopFiltersPr
         theme={`${color === COLOR_OPTIONS.WHITE ? "contained" : "outlined"} rounded`}
         click={() => onSetColor(COLOR_OPTIONS.WHITE)}
       >
-        White
+        Белое
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -48,7 +48,7 @@ export function UserSalesTopFilters({ onSetColor, color }: UserSalesTopFiltersPr
         theme={`${color === COLOR_OPTIONS.ALL ? "contained" : "outlined"} rounded`}
         click={() => onSetColor(COLOR_OPTIONS.ALL)}
       >
-        All
+        Все
       </BaseButton>
     </div>
   );

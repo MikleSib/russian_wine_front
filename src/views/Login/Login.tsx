@@ -133,11 +133,11 @@ const Login: FC = observer(() => {
               type="submit"
               loading={authStore.authForm.loading}
             >
-              Log in
+              Вход
             </BaseButton>
           </form>
           <BaseLink className="login__forgot-link" path={routes.forgotPassword.path}>
-            Forgot password?
+            Забыли пароль?
           </BaseLink>
         </AuthFormWrapper>
       </div>

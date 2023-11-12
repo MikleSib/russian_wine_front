@@ -75,15 +75,15 @@ function BuyNowModal({
     if (payment === PAYMENT_METHOD.CRYPTOCURRENCY) {
       if (account) {
         if (isApproved) {
-          return "Buy now";
+          return "Купить сейчас";
         } else {
-          return requestedApproval ? "Approving..." : "Approve USDT Contract";
+          return requestedApproval ? "Разрешение..." : "Разрешаю USDT Contract";
         }
       } else {
-        return "Connect wallet";
+        return "Подключите кошелек";
       }
     } else {
-      return "Buy now";
+      return "Купить сейчас";
     }
   }, [payment, account, isApproved, requestedApproval]);
 
@@ -95,10 +95,8 @@ function BuyNowModal({
       }
 
       if (!isApproved) {
-        console.log("isApproved", isApproved);
         handleApprove();
       } else {
-        console.log("isApproved", isApproved);
         handleBuyToken();
 
         // ReactGA.event("purchase");
@@ -129,7 +127,7 @@ function BuyNowModal({
             id: Date.now(),
             TxTime: Date.now(),
             type: "success",
-            message: "NFT was successfully minted",
+            message: "NFT Было успешно заминчено!",
           });
 
           // ReactGA.event("purchase");

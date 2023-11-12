@@ -25,7 +25,7 @@ function TopRegions() {
 
   return (
     <>
-      <h3 className="dashboard__title">Wine</h3>
+      <h3 className="dashboard__title">Вино</h3>
       <Slider slides={renderSlides()} settings={regionsSliderSettings} />
     </>
   );

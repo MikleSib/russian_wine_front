@@ -24,7 +24,7 @@ function TopSales({ userNickname }: { userNickname: string }) {
             onOptionChange={({ value }) => setPeriod(value)}
           />
           <BaseButton size="small" theme="outlined rounded" color="gray">
-            All
+            Все
           </BaseButton>
         </div>
       </div>

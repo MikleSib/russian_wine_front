@@ -71,13 +71,13 @@ function Dashboard() {
       // element: "",
       intro: (
         <>
-          <h4>What is Winessy?</h4>
+          <h4>Что за русское вино?</h4>
           <ul>
-            <li>Winessy is the blockchain platform for trading fine wines</li>
-            <li>We use NFTs for selling the ownership of each bottle</li>
+            <li>Это блокчейн-платформа для торговли марочными винами</li>
+            <li>Мы используем Nfs для продажи права собственности на каждую бутылку</li>
             <li>
-              All the resellings are tracked within the blockchain which is fast, safe and easy to
-              use
+            Все перепродажи отслеживаются в блокчейне, который является быстрым, безопасным и простым в
+            использовании
             </li>
           </ul>
         </>
@@ -88,17 +88,17 @@ function Dashboard() {
       element: "#for-top-invested-hint",
       intro: (
         <>
-          <h4>Smart wine trading</h4>
+          <h4>Лучшая торговля вином</h4>
           <ul>
             <li>
-              You can buy the investing wine of Grand Cru and Grand Cru Classe segments using
-              cryptocurrency and fiat money
+              Вы можете приобрести инвестиционное вино Русского шато, используя
+              криптовалюту или фиатные деньги
             </li>
-            <li>NFT gives the opportunity of easy interaction with the wine</li>
-            <li>Once you buy the NFT, you are registered as the current owner</li>
+            <li>NFT дает возможность легкого взаимодействия с вином</li>
+            <li>Как только вы покупаете NFT, вы регистрируетесь как текущий владелец</li>
             <li>
-              Blockchain registers each movement of the bottle as well as controls the authenticity
-              of wine
+              Блокчейн регистрирует каждое перемещение бутылки, а также контролирует подлинность
+              вина
             </li>
           </ul>
         </>
@@ -110,13 +110,13 @@ function Dashboard() {
       element: "#for-user-sales-hint",
       intro: (
         <>
-          <h4>Sell your NFT</h4>
+          <h4>Продайте свою NFT</h4>
           <ul>
-            <li>You can resell the NFT at your own price</li>
-            <li>While selling the NFT, the ownership of the bottle is transferred to the buyer</li>
+            <li>Вы можете перепродать NFT по своей собственной цене</li>
+            <li>При продаже NFT право собственности на бутылку переходит к покупателю</li>
             <li>
-              NFT eliminates the logistic and paperwork costs as the bottle doesn’t leave the
-              Bordeaux City Bond storage until the user asks for delivery
+              NFT устраняет затраты на логистику и оформление документов, поскольку бутылка не покидает хранилища
+              до тех пор, пока пользователь не попросит о доставке
             </li>
           </ul>
         </>
@@ -128,15 +128,15 @@ function Dashboard() {
       element: ".footer__contacts",
       intro: (
         <>
-          <h4>Get more</h4>
+          <h4>Получить больше</h4>
           <ul>
             <li>
-              We are pleased to welcome you on our website and invite you to follow us on social
-              media for new updates, useful tips and company news
+              Мы рады приветствовать вас на нашем веб-сайте и приглашаем подписываться на нас в социальных сетях
+              чтобы узнавать о новых обновлениях, полезных советах и новостях компании
             </li>
             <li>
-              Check out the FAQ section in case something is unclear or don’t hesitate to ask us
-              directly through the chat
+              Ознакомьтесь с разделом часто задаваемых вопросов, если что-то непонятно, или не стесняйтесь спрашивать нас
+              напрямую через чат
             </li>
           </ul>
         </>
@@ -166,7 +166,7 @@ function Dashboard() {
           <TopRegions />
           <span id="for-top-invested-hint">
             <div className="dashboard__top">
-              <h2 className="dashboard__title m-0">Top Invested</h2>
+              <h2 className="dashboard__title m-0">Лучшие инвестиции</h2>
               <DashboardColorFilter pathname={routes.topInvested.path} />
             </div>
             {isMobile ? (
@@ -187,7 +187,7 @@ function Dashboard() {
             )}
           </span>
           <div className="dashboard__new">
-            <h2 className="dashboard__title m-0">New items</h2>
+            <h2 className="dashboard__title m-0">Новые товары</h2>
             <BaseButton
               size="small"
               theme="contained rounded"
@@ -215,7 +215,7 @@ function Dashboard() {
           <TopSales userNickname={rootStore.authStore.selfInformation.nickname} />
           <span id="for-user-sales-hint">
             <div className="dashboard__top">
-              <h3 className="dashboard__title m-0">User Sales</h3>
+              <h3 className="dashboard__title m-0">Вторичный рынок</h3>
               <DashboardColorFilter pathname={routes.userSales.path} />
             </div>
             {isMobile ? (
@@ -267,7 +267,7 @@ function Dashboard() {
               className="d-none d-md-flex"
               click={() => window.open(banner.link, "_blank", "noopener, noreferrer")}
             >
-              Explore
+              Изучайте!
             </BaseButton>
           </div>
           <div className="dashboard__slide-stars">

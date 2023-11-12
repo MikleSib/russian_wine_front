@@ -48,11 +48,11 @@ const ResetPassword: FC = observer(() => {
     <>
       <PageMeta />
       <div className="reset-password">
-        <AuthFormWrapper title={authStore.successScreen ? "Password changed" : "New password"}>
+        <AuthFormWrapper title={authStore.successScreen ? "Пароль изменен" : "Новый пароль"}>
           {authStore.successScreen ? (
             <>
               <p className="reset-password__success-text">
-                You password has been successfully changed. You can log in
+                Ваш пароль был успешно изменен. Вы можете войти в систему
               </p>
               <BaseButton
                 className="reset-password__submit"
@@ -60,7 +60,7 @@ const ResetPassword: FC = observer(() => {
                 click={handleClickButton}
                 loading={authStore.authForm.loading}
               >
-                Log in
+                Авторизоваться
               </BaseButton>
             </>
           ) : (
@@ -97,7 +97,7 @@ const ResetPassword: FC = observer(() => {
                   type="submit"
                   loading={authStore.authForm.loading}
                 >
-                  Send
+                  Отправить
                 </BaseButton>
               </form>
             </>

@@ -87,18 +87,18 @@ function UserFollowers() {
             </span>
             <span className="followers__nick">{row.nickname}</span>
             <span className="d-md-none">
-              Followers: <span className="followers__cell--bold">{row.followersCount}</span>
+              Поклонники: <span className="followers__cell--bold">{row.followersCount}</span>
             </span>
           </div>
         </div>
         <div className="followers__cell">
-          Followers: <span className="followers__cell--bold">{row.followersCount}</span>
+          Поклонники: <span className="followers__cell--bold">{row.followersCount}</span>
         </div>
         <div className="followers__cell">
-          Following: <span className="followers__cell--bold">{row.followingCount}</span>
+          Подписки: <span className="followers__cell--bold">{row.followingCount}</span>
         </div>
         <div className="followers__cell">
-          Items: <span className="followers__cell--bold">{row.concreteBottlesCount}</span>
+          Товары: <span className="followers__cell--bold">{row.concreteBottlesCount}</span>
         </div>
       </div>
     ));

@@ -49,7 +49,7 @@ function Profile() {
           </div>
           <div className="profile__nav profile__nav--fixed">
             <BaseLink className="profile__link" path="/profile">
-              Profile
+              Профиль
             </BaseLink>
             <BaseLink
               className="profile__link"
@@ -67,13 +67,13 @@ function Profile() {
         </div>
         <div className={clsx("profile__nav", { "d-none": isFollowPages })}>
           <BaseLink className="profile__link" path="/profile">
-            Profile
+            Профиль
           </BaseLink>
           <BaseLink className="profile__link" path="/profile/payment">
-            Payment
+            Способ оплаты
           </BaseLink>
           <BaseLink className="profile__link" path="/profile/favorites">
-            Favorites
+            Подписчики
           </BaseLink>
         </div>
         <div className="profile__container container">
@@ -112,7 +112,7 @@ function Profile() {
                 className="profile__info-block cursor-pointer"
                 onClick={() => navigate("/profile/followers")}
               >
-                <span className="profile__info-label">Followers</span>
+                <span className="profile__info-label">Поклонники</span>
                 <span className="profile__info-value">
                   {authStore.selfInformation.followersCount}
                 </span>
@@ -121,19 +121,19 @@ function Profile() {
                 className="profile__info-block cursor-pointer"
                 onClick={() => navigate("/profile/following")}
               >
-                <span className="profile__info-label">Following</span>
+                <span className="profile__info-label">Подписки</span>
                 <span className="profile__info-value">
                   {authStore.selfInformation.followingCount}
                 </span>
               </div>
               <div className="profile__info-block d-none d-md-flex">
-                <span className="profile__info-label">Items</span>
+                <span className="profile__info-label">Товары</span>
                 <span className="profile__info-value">
                   {authStore.selfInformation.concreteBottlesCount}
                 </span>
               </div>
               <div className="profile__info-block d-none d-md-flex">
-                <span className="profile__info-label">Balance</span>
+                <span className="profile__info-label">Баланс</span>
                 <span className="profile__info-value">
                   $ {authStore.selfInformation.concreteBottlesTotalPrice}
                 </span>

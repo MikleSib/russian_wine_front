@@ -111,12 +111,12 @@ const MarketPlace: FC = observer(() => {
       element: ".marketplace__aside",
       intro: (
         <>
-          <h4>Handy filters</h4>
+          <h4>Фильтр</h4>
           <ul>
             <li>
-              Easy to use filters that you can manage according to your investment preferences
+              Простые в использовании фильтры, которыми вы можете управлять в соответствии с вашими инвестиционными предпочтениями
             </li>
-            <li>Observe, compare and choose what you like!</li>
+            <li>Наблюдайте, сравнивайте и выбирайте то, что вам нравится!</li>
           </ul>
         </>
       ),
@@ -127,11 +127,11 @@ const MarketPlace: FC = observer(() => {
       element: "#for-region-and-year-filter-hint",
       intro: (
         <>
-          <h4>Focus on</h4>
+          <h4>Обрати внимание на то, что</h4>
           <ul>
             <li>
-              Observe only the wines relevant to your request by choosing producers and vintages you
-              are interested in
+              Наблюдать только вина, соответствующие вашему запросу, выбирая производителей и марок вы
+              интересуют
             </li>
           </ul>
         </>
@@ -143,16 +143,16 @@ const MarketPlace: FC = observer(() => {
       element: "#for-rating-rp-filter-hint",
       intro: (
         <>
-          <h4>Robert Parker rating</h4>
+          <h4>Robert Parker рейтинг</h4>
           <ul>
-            <li>RP rating is the most remarkable one for the Bordeaux wines</li>
+            <li>Рейтинг RP является самым примечательным для вин</li>
             <li>
-              Robert Parker is the world famous wine critic who is an expert in Bordeaux wines
+              Роберт Паркер - всемирно известный винный критик, эксперт по винам
             </li>
-            <li>The famous wine-futures reborn were caused by his evaluations of the wines</li>
+            <li>Знаменитое возрождение винного фьючерса было вызвано его оценками вин</li>
             <li>
-              He also introduced the famous tendency to evaluate wines by 100 scale which is now
-              used by many other critics and resources
+              Он также ввел знаменитую тенденцию оценивать вина по 100-балльной шкале, которая сейчас
+              используется многими другими критиками и ресурсами
             </li>
           </ul>
         </>

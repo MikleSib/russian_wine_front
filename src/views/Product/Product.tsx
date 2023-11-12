@@ -43,7 +43,7 @@ function Product() {
 
   const pageTitle = `Buy wine ${winePool?.wineParams?.WineName ?? ""} ${
     winePool?.wineParams?.WineProductionYear ?? ""
-  } | Winessy - Wine NFT Marketplace №1`;
+  } | Russan-wine - Винный рынок NFT №1`;
 
   const schema: WithContext<ProductSchemaInterface> = {
     "@context": "https://schema.org",

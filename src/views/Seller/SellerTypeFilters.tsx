@@ -30,7 +30,7 @@ export function SellerTypeFilters({ onSetType, type }: SellerTypeFiltersProps) {
         theme={`${type === TYPE_OPTIONS.TOP ? "contained" : "outlined"} rounded`}
         click={() => onSetType(TYPE_OPTIONS.TOP)}
       >
-        Top
+        Топ
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -39,7 +39,7 @@ export function SellerTypeFilters({ onSetType, type }: SellerTypeFiltersProps) {
         theme={`${type === TYPE_OPTIONS.NEW ? "contained" : "outlined"} rounded`}
         click={() => onSetType(TYPE_OPTIONS.NEW)}
       >
-        New
+        Новые
       </BaseButton>
       <BaseButton
         className="d-none d-md-flex"
@@ -48,7 +48,7 @@ export function SellerTypeFilters({ onSetType, type }: SellerTypeFiltersProps) {
         theme={`${type === TYPE_OPTIONS.ALL ? "contained" : "outlined"} rounded`}
         click={() => onSetType(TYPE_OPTIONS.ALL)}
       >
-        All
+        Все
       </BaseButton>
     </div>
   );

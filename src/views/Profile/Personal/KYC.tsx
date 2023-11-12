@@ -24,10 +24,10 @@ function KYC({ isKysApproved, isPending, onGetKycStatusAction }: KYCProps) {
   return (
     <div className="kyc">
       <div className="kyc__container">
-        <h3 className="personal__title">KYC verification</h3>
+        <h3 className="personal__title">Проверка KYC</h3>
         <p className="kyc__caption">
-          Only verified users can use all the features when working with Winessy, including making
-          purchases using a bank card and exchanging NFTs for physical goods.
+          Только верифицированные пользователи могут использовать все функции при работе с сайтом, включая совершение
+          покупок с помощью банковской карты и обмен NFT на физические товары.
         </p>
         <div className="kyc__statusWrapper">
           <div className="kyc__status">
@@ -46,13 +46,13 @@ function KYC({ isKysApproved, isPending, onGetKycStatusAction }: KYCProps) {
           </div>
           {!isKysApproved && !isPending && (
             <BaseButton size="large" className="d-none d-md-flex" click={showKycModal}>
-              Verification
+              Проверка
             </BaseButton>
           )}
         </div>
         {!isKysApproved && !isPending && (
           <BaseButton size="large" className="d-md-none w-100" click={showKycModal}>
-            Verification
+            Проверка
           </BaseButton>
         )}
       </div>

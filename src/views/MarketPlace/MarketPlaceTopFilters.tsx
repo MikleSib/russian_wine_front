@@ -51,7 +51,7 @@ export function MarketPlaceTopFilters({
             theme={`${type === TYPE_OPTIONS.TOP ? "contained" : "outlined"} rounded`}
             click={() => onSetType(TYPE_OPTIONS.TOP)}
           >
-            Top
+            Топ
           </BaseButton>
           <BaseButton
             className="d-none d-md-flex"
@@ -60,7 +60,7 @@ export function MarketPlaceTopFilters({
             theme={`${type === TYPE_OPTIONS.NEW ? "contained" : "outlined"} rounded`}
             click={() => onSetType(TYPE_OPTIONS.NEW)}
           >
-            New
+            Новое
           </BaseButton>
           <BaseButton
             className="d-none d-md-flex"
@@ -69,7 +69,7 @@ export function MarketPlaceTopFilters({
             theme={`${type === TYPE_OPTIONS.ALL ? "contained" : "outlined"} rounded`}
             click={() => onSetType(TYPE_OPTIONS.ALL)}
           >
-            All
+            Все
           </BaseButton>
         </>
       ) : (
@@ -87,7 +87,7 @@ export function MarketPlaceTopFilters({
             theme={`${color === COLOR_OPTIONS.RED ? "contained" : "outlined"} rounded`}
             click={() => onSetColor(COLOR_OPTIONS.RED)}
           >
-            Red
+            Красное
           </BaseButton>
           <BaseButton
             className="d-none d-md-flex"
@@ -96,7 +96,7 @@ export function MarketPlaceTopFilters({
             theme={`${color === COLOR_OPTIONS.WHITE ? "contained" : "outlined"} rounded`}
             click={() => onSetColor(COLOR_OPTIONS.WHITE)}
           >
-            White
+            Белое
           </BaseButton>
           <BaseButton
             className="d-none d-md-flex"
@@ -105,7 +105,7 @@ export function MarketPlaceTopFilters({
             theme={`${color === COLOR_OPTIONS.ALL ? "contained" : "outlined"} rounded`}
             click={() => onSetColor(COLOR_OPTIONS.ALL)}
           >
-            All
+            Все
           </BaseButton>
         </>
       )}
