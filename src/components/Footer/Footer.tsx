@@ -145,10 +145,10 @@ const Footer: FC = memo(() => {
           </div>
         </div> 
       </div>*/}
-      <div className="footer__bottom">
+      {/* <div className="footer__bottom">
         <span className="footer__copyright">
           Авторское право &copy; 2023-{new Date().getFullYear()} Russian-Wine. Все права защищены.
-        </span>
+        </span> */}
         {/* <div>
           <BaseLink
             className="footer__link footer__link--external"
