@@ -71,29 +71,30 @@ const Header: FC = observer(() => {
 
   const options = [
     {
-      label: "USD",
-      value: "USD",
-    },
-    {
-      label: "EUR",
-      value: "EUR",
-    },
-    {
-      label: "CZK",
-      value: "CZK",
-    },
-    {
-      label: "GBP",
-      value: "GBP",
-    },
-    {
-      label: "HKD",
-      value: "HKD",
-    },
-    {
-      label: "CNY",
-      value: "CNY",
-    },
+      label: "RUB",
+      value: "RUB",
+    // },
+    // {
+    //   label: "EUR",
+    //   value: "EUR",
+    // },
+    // {
+    //   label: "CZK",
+    //   value: "CZK",
+    // },
+    // {
+    //   label: "GBP",
+    //   value: "GBP",
+    // },
+    // {
+    //   label: "HKD",
+    //   value: "HKD",
+    // },
+    // {
+    //   label: "CNY",
+    //   value: "CNY",
+    // },
+    }
   ];
 
   const getDefaultOptionIndex = () => {
