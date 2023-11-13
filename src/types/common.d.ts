@@ -114,13 +114,13 @@ type FilterName =
   | "WineColor";
 
 type FilterAlias =
-  | "Name"
-  | "Price"
-  | "Country"
-  | "Region"
-  | "Manufacturer"
-  | "Year"
-  | "Volume"
+  | "Изготовитель"
+  | "Цена"
+  | "Страна"
+  | "Регион"
+  | "Изготовитель"
+  | "Год"
+  | "Объем"
   | "Rating RP"
   | "IsNew"
   | "WineColor";
