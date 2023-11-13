@@ -55,13 +55,13 @@ function Profile() {
               className="profile__link"
               path={`/profile/${isFollowPages ? "followers" : "payment"}`}
             >
-              {isFollowPages ? "Followers" : "Payment"}
+              {isFollowPages ? "Подписки" : "Способ оплаты"}
             </BaseLink>
             <BaseLink
               className="profile__link"
               path={`/profile/${isFollowPages ? "following" : "favorites"}`}
             >
-              {isFollowPages ? "Following" : "Favorites"}
+              {isFollowPages ? "Поклонники" : "Избранное"}
             </BaseLink>
           </div>
         </div>

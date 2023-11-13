@@ -86,7 +86,7 @@ export default function SellerHeader({
               navigate(hasSubscribe ? `/user/${userInfo.nickname}/followers` : "/profile/followers")
             }
           >
-            <span className="sellerHeader__info-label">Followers</span>
+            <span className="sellerHeader__info-label">Поклонники</span>
             <span className="sellerHeader__info-value">{userInfo.followersCount}</span>
           </div>
           <div
@@ -95,16 +95,16 @@ export default function SellerHeader({
               navigate(hasSubscribe ? `/user/${userInfo.nickname}/following` : "/profile/following")
             }
           >
-            <span className="sellerHeader__info-label">Following</span>
+            <span className="sellerHeader__info-label">Подписки</span>
             <span className="sellerHeader__info-value">{userInfo.followingCount}</span>
           </div>
           <div className="sellerHeader__info-block d-none d-md-flex">
-            <span className="sellerHeader__info-label">Items</span>
+            <span className="sellerHeader__info-label">Товары</span>
             <span className="sellerHeader__info-value">{userInfo.concreteBottlesCount}</span>
           </div>
           <div className="sellerHeader__info-block d-none d-md-flex">
-            <span className="sellerHeader__info-label">Balance</span>
-            <span className="sellerHeader__info-value">$ {userInfo.concreteBottlesTotalPrice}</span>
+            <span className="sellerHeader__info-label">Баланс</span>
+            <span className="sellerHeader__info-value">₽ {userInfo.concreteBottlesTotalPrice}</span>
           </div>
         </div>
         <span className="sellerHeader__description">{userInfo.description}</span>

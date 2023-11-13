@@ -374,7 +374,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
               className="delivery__field"
               autocomplete
               name="country_code"
-              label="Country"
+              label="Страна"
               placeholder="Select your country"
               formKey="deliveryForm"
               storeKey="authStore"
@@ -396,7 +396,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
               <span className="delivery__plus-sign">+</span>
               <BaseInput
                 name="phone_number"
-                label="Phone number"
+                label="Номер телефона"
                 formKey="deliveryForm"
                 storeKey="authStore"
                 type="number"
@@ -409,7 +409,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="first_name"
-              label="First name"
+              label="Имя"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -419,7 +419,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="last_name"
-              label="Last name"
+              label="Фамилия"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -431,7 +431,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="street_address"
-              label="Street address"
+              label="Улица"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -441,7 +441,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="street_address2"
-              label="Street address 2 (optional)"
+              label="Улица 2 (опционально)"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -453,7 +453,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field is-small"
               name="city"
-              label="City"
+              label="Город"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -463,7 +463,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field is-small"
               name="region"
-              label="State / Province / Region"
+              label="Область / Регион"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -473,7 +473,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field is-small"
               name="zip_code"
-              label="ZIP code"
+              label="ZIP код"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled={disabledFields}
@@ -484,7 +484,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="email"
-              label="E-mail"
+              label="Почта"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -493,7 +493,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             <BaseInput
               className="delivery__field"
               name="nickname"
-              label="Nickname"
+              label="Никнейм"
               formKey="deliveryForm"
               storeKey="authStore"
               // disabled={disabledFields}
@@ -510,7 +510,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
             className="mx-auto mb-3"
             disabled={loading || !formChanged}
           >
-            {isFirstEnter ? "Calculate" : "Recalculate"}
+            {isFirstEnter ? "Расчитать" : "Перерасчитать"}
           </BaseButton>
           {/* <BaseButton
             size="large"
@@ -555,18 +555,18 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
       ) {
         return (
           <div className="mb-2">
-            <h4 className="delivery__title--delivery-price">Delivery price</h4>
+            <h4 className="delivery__title--delivery-price">Сумма доставки</h4>
 
             <div
               className={clsx("delivery__row d-block", {
                 "delivery__row--border-bottom": dataProps?.isPurchasedWithCreditCard,
               })}
             >
-              <div className="delivery__row--price-title">Block NFT</div>
+              <div className="delivery__row--price-title">Блокировать NFT</div>
               <div className="delivery__row--info d-flex mb-0">
                 <p>
-                  The sum needed for blocking your NFT. Thus, the smart contract can block your NFT
-                  while delivery and destroy it after successful receiving of the parcel
+                  Сумма, необходимая для блокировки вашего NFT. Таким образом, смарт-контракт может заблокировать ваш NFT
+                  во время доставки и уничтожьте его после успешного получения посылки
                 </p>
                 <span>$3</span>
               </div>
@@ -580,46 +580,46 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
                 loading={loading || isLoadingPayment}
                 disabled={formChanged || blockNftConfirmed}
               >
-                Block NFT
+                Блокировать NFT
               </BaseButton>
             )}
             <div className="delivery__row delivery__row--border-bottom d-block">
-              <div className="delivery__row--price-title">Delivery price</div>
+              <div className="delivery__row--price-title">Цена доставки</div>
               <div className="delivery__row--info d-flex mb-0">
-                <p>The sum of delivery</p>
-                <span>${parseFloat(deliveryInfo.delivery_price)}</span>
+                <p>Сумма доставки</p>
+                <span>₽{parseFloat(deliveryInfo.delivery_price)}</span>
               </div>
             </div>
             <div className="delivery__row delivery__row--border-bottom d-block">
-              <div className="delivery__row--price-title">Tax & duty</div>
+              <div className="delivery__row--price-title">Налоги и пошлины</div>
               <div className="delivery__row--info d-flex mb-0">
                 <p>
-                  The indicative price you are to pay at arrival of your parcel according to the
-                  legislation of the country of delivery
+                  Ориентировочная цена, которую вы должны оплатить по прибытии вашей посылки в соответствии с
+                  законодательством страны доставки
                 </p>
 
                 <span>${parseFloat(deliveryInfo.tax)}</span>
               </div>
             </div>
             <div className="delivery__row delivery__row--border-bottom d-block">
-              <div className="delivery__row--price-title">Insurance & storage</div>
+              <div className="delivery__row--price-title">Страхование и хранение</div>
               <div className="delivery__row--info d-flex mb-0">
-                <p>Costs of storing and insurance of the bottle for the period of ownership</p>
+                <p>Расходы по хранению и страхованию бутылки на период владения</p>
                 <span>${insuranceAndStoragePrice}</span>
               </div>
             </div>
             <div className="delivery__row delivery__row--border-bottom d-block">
-              <div className="delivery__row--price-title">Packaging</div>
+              <div className="delivery__row--price-title">Упаковка</div>
               <div className="delivery__row--info d-flex mb-0">
-                <p>Packaging service of Bordeaux City Bond</p>
-                <span>$3</span>
+                <p>Служба упаковки</p>
+                <span>300 Рублей</span>
               </div>
             </div>
             <div className="delivery__row d-block">
               <div className="delivery__row--price-title">Total</div>
               <div className="delivery__row--info d-flex mb-0">
-                <p>While paying with Metamask there will be two payments to proceed</p>
-                <span>${totalPrice}</span>
+                <p>При оплате с помощью Metamask необходимо будет произвести два платежа</p>
+                <span>₽{totalPrice}</span>
               </div>
             </div>
           </div>
@@ -632,7 +632,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
         return (
           <div>
             <p className="delivery__cost-info text-center">
-              Something went wrong. Please, check delivery data or retry calculate
+              Что-то пошло не так. Пожалуйста, проверьте данные о доставке или повторите попытку расчета
             </p>
           </div>
         );
@@ -644,7 +644,7 @@ function DeliveryModal({ onDismiss, countries, pools, setPools, dataProps }: Del
     if (deliveryInfo.blockchain_status) {
       return (
         <div className="delivery__status">
-          Delivery status:
+          Статус доставки:
           <span>{deliveryInfo.blockchain_status}</span>
         </div>
       );

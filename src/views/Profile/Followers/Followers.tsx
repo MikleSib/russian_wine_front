@@ -32,7 +32,7 @@ function Followers() {
   return (
     <div className="followers">
       <div className="followers__filters">
-        <BaseSearch isRounded placeholder="Search users" onChange={() => null} />
+        <BaseSearch isRounded placeholder="Поиск пользователей" onChange={() => null} />
         <FollowersTopFilters type={typeFilter} onSetType={setTypeFilter} />
       </div>
       {isLoading ? <SkeletonLoading count={5} width="100%" height={100} /> : renderFollowerRows()}

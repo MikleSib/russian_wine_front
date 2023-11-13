@@ -174,15 +174,15 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             </BaseLink>
           </p>
         )}
-        <h4 className="delivery-detail__title">Personal</h4>
+        <h4 className="delivery-detail__title">Персональные данные</h4>
         <form autoComplete="off" noValidate>
           <div className="d-lg-flex justify-content-between mb-lg-3">
             <ReactSelect
               className="delivery-detail__field"
               autocomplete
               name="country_code"
-              label="Country"
-              placeholder="Select your country"
+              label="Страна"
+              placeholder="Выберите вашу страну"
               formKey="deliveryForm"
               storeKey="authStore"
               options={countryOptions ?? []}
@@ -201,7 +201,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
               /> */}
               <BaseInput
                 name="phone_number"
-                label="Phone number"
+                label="Номер телефона"
                 formKey="deliveryForm"
                 storeKey="authStore"
                 type="number"
@@ -213,7 +213,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="first_name"
-              label="First name"
+              label="Имя"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -222,7 +222,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="last_name"
-              label="Last name"
+              label="Фамилия"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -233,7 +233,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="street_address"
-              label="Street address"
+              label="Улица"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -242,7 +242,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="street_address2"
-              label="Street address 2 (optional)"
+              label="Улица 2 (опционально)"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -253,7 +253,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field is-small"
               name="city"
-              label="City"
+              label="Город"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -262,7 +262,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field is-small"
               name="region"
-              label="State / Province / Region"
+              label="Область / Регион"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -271,7 +271,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field is-small"
               name="zip_code"
-              label="ZIP code"
+              label="ZIP код"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -281,7 +281,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="email"
-              label="E-mail"
+              label="Почта"
               formKey="deliveryForm"
               storeKey="authStore"
               disabled
@@ -289,7 +289,7 @@ function DeliveryDetailModal({ onDismiss, countries, dataProps }: DeliveryModalP
             <BaseInput
               className="delivery-detail__field"
               name="nickname"
-              label="Nickname"
+              label="Никнейм"
               formKey="deliveryForm"
               storeKey="authStore"
               // disabled={disabledFields}

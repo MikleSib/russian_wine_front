@@ -51,7 +51,7 @@ function UserFollowing() {
         <div className="userFollows__container container">
           <div className="following">
             <div className="following__filters">
-              <BaseSearch isRounded placeholder="Search users" onChange={() => null} />
+              <BaseSearch isRounded placeholder="Поиск пользователей" onChange={() => null} />
               <FollowersTopFilters type={typeFilter} onSetType={setTypeFilter} />
             </div>
             {isLoading ? (

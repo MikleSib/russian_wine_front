@@ -80,8 +80,8 @@ function SendTokeModal({
   return (
     <Modal size="large" onDismiss={onDismiss}>
       <div className="sendTokenModal">
-        <h4 className="sendTokenModal__title">Send</h4>
-        <span className="sendTokenModal__label">Wallet address</span>
+        <h4 className="sendTokenModal__title">Отправить</h4>
+        <span className="sendTokenModal__label">Адрес кошелька</span>
         <input
           className={clsx("sendTokenModal__input", error && "sendTokenModal__input--error")}
           type="text"

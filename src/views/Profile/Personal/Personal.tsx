@@ -48,26 +48,26 @@ function Personal() {
         <h3 className="personal__title">Personal</h3>
         <form noValidate autoComplete="off" className="personal__form" onSubmit={handleSubmitForm}>
           <BaseInput
-            label="First name"
+            label="Имя"
             name="firstName"
             storeKey="authStore"
             formKey="personalInfoForm"
           />
           <BaseInput
-            label="Last name"
+            label="Фамилия"
             name="lastName"
             storeKey="authStore"
             formKey="personalInfoForm"
           />
           <BaseInput
-            label="E-mail"
+            label="Почта"
             name="email"
             storeKey="authStore"
             formKey="personalInfoForm"
             disabled
           />
           <BaseInput
-            label="Nickname"
+            label="Никнейм"
             name="nickname"
             storeKey="authStore"
             formKey="personalInfoForm"

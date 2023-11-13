@@ -219,7 +219,7 @@ function RenderRow({
         size="small"
         click={() => (item.orderId ? handleCancelOrder(item.orderId) : handleShowSellModal(item))}
       >
-        {item.orderId ? "Cancel" : "Sell"}
+        {item.orderId ? "Отменить" : "Продать"}
       </BaseButton>,
       <BaseButton
         className="purchase__cell--sell"
@@ -237,7 +237,7 @@ function RenderRow({
           })
         }
       >
-        Exchange
+        Почта
       </BaseButton>,
       <BaseButton
         className="purchase__cell--button"
@@ -247,7 +247,7 @@ function RenderRow({
         size="small"
         click={!item.orderId ? () => handleShowSendModal(item) : undefined}
       >
-        Send
+        Отправить
       </BaseButton>,
       <BaseButton
         color="red"
@@ -264,7 +264,7 @@ function RenderRow({
           )
         }
       >
-        View
+        Посмотреть
       </BaseButton>,
       // !isMobile ? (
       //   <Checkbox

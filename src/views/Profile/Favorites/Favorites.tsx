@@ -58,7 +58,7 @@ function Favorites() {
   return (
     <div className="favorites">
       <div className="favorites__filters">
-        <BaseSearch isRounded placeholder="Search items" onChange={() => null} />
+        <BaseSearch isRounded placeholder="Поиск пользователей" onChange={() => null} />
         <SellerTypeFilters type={typeFilter} onSetType={setTypeFilter} />
       </div>
       <div className="favorites__cards-wrapper">
