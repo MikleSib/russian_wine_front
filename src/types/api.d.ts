@@ -135,14 +135,14 @@ interface ActivityRaw {
 }
 
 enum Purchase_Status {
-  STATUS_MINTED = "minted",
+  STATUS_MINTED = "Заминчено",
   STATUS_PENDING = "pending",
-  STATUS_RECEIVED = "received",
-  STATUS_DELIVERED = "delivered",
-  STATUS_BOUGHT = "bought",
+  STATUS_RECEIVED = "Отправлено",
+  STATUS_DELIVERED = "В доставке",
+  STATUS_BOUGHT = "Купленное",
   STATUS_IN_ORDER = "in_order",
   STATUS_IN_DELIVERY_SERVICE = "in_delivery_service",
-  STATUS_ON_SALE = "on sale",
+  STATUS_ON_SALE = "На продаже",
   STATUS_DELIVERY = "delivery",
 }
 
