@@ -159,7 +159,7 @@ function WineCard({
             className="wine-card__link"
             path={`/${marketPool ? userName : "french-wines"}/${marketPool ? poolId : productSlug}`}
           >
-            View
+            Посмотреть
           </BaseLink>
         </div>
         {(!isNew || !isMarketPlacePath || userName) && (
@@ -185,7 +185,7 @@ function WineCard({
                     basket ? () => (onBuy ? onBuy(convertedPriceValue) : null) : handleClickView
                   }
                 >
-                  {basket ? "Оплатить" : "View"}
+                  {basket ? "Оплатить" : "Посмотреть"}
                 </BaseButton>
               </div>
             ) : (
@@ -195,7 +195,7 @@ function WineCard({
                 fullWidth
                 click={basket ? () => (onBuy ? onBuy(convertedPriceValue) : null) : handleClickView}
               >
-                {basket ? "Оплатить" : "View"}
+                {basket ? "Оплатить" : "Посмотреть"}
               </BaseButton>
             )}
           </>

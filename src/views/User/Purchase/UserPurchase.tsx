@@ -134,7 +134,7 @@ function UserPurchase() {
           handleClickViewPurchased(item.orderId !== null, item.orderId ?? item.winePool.poolId)
         }
       >
-        View
+        Посмотреть
       </BaseButton>
     );
 
